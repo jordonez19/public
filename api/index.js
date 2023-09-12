@@ -25,34 +25,24 @@ const handleRequest = async (requestFunction, url, jsonData, params = {}) => {
   }
 };
 
-const get = async (path, id = "") => {
-  const url = `${apiUrl}${path}/${id}`;
+const get = async (path, token) => {
+  const url = `${apiUrl}${path}`;
   return handleRequest(axios.get, url);
 };
 
-const post = async (path, jsonData) => {
+const post = async (path, jsonData, token) => {
   const url = `${apiUrl}${path}`;
   return handleRequest(axios.post, url, jsonData);
 };
 
-const put = async (path, jsonData) => {
+const put = async (path, jsonData, token) => {
   const url = `${apiUrl}${path}`;
   return handleRequest(axios.put, url, jsonData);
 };
 
-const del = async (path, jsonData) => {
+const del = async (path, jsonData, token) => {
   const url = `${apiUrl}${path}`;
   return handleRequest(axios.delete, url, jsonData);
 };
 
-const getStringify = async (path, stringify = true, params = {}) => {
-  const url = `${apiUrl}${path}`;
-  const content = await handleRequest(axios.get, url, {}, params);
-  if (stringify) {
-    return content.map((dataString) => JSON.parse(dataString));
-  } else {
-    return content;
-  }
-};
-
-export { get, post, put, del, getStringify }; 
+export { get, post, put, del }; 
