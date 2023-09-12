@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import Router from "next/router";
 import { withUser } from "@/hoc/withUser";
 
-const Test = ({ user, token }) => {
+const Login = ({ user, token }) => {
   useEffect(() => {
     if (!user) {
       Router.push("/login");
@@ -18,8 +18,8 @@ const Test = ({ user, token }) => {
   );
 };
 
-Test.propTypes = {
+Login.propTypes = {
   user: PropTypes.object,
 };
 
-export default withUser(Test);
+export default withUser(Login);
