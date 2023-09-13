@@ -1,0 +1,25 @@
+
+  ├── pages/
+  |   ├── index.js (Página de inicio, por ejemplo)
+  |   ├── login.js (Página de inicio de sesión)
+  |   └── dashboard.js (Página de dashboard protegida)
+  |
+  ├── containers/
+  |   ├── auth.js (Controlador de autenticación)
+  |
+  ├── components/
+  |   ├── Layout.js (Componente de diseño común)
+  |   ├── LoginForm.js (Componente de formulario de inicio de sesión)
+  |   └── Dashboard.js (Componente de la página de dashboard)
+  |
+  ├── contexts/
+  |   ├── AuthContext.js (Contexto de autenticación)
+  |
+  ├── lib/
+  |   ├── auth.js (Funciones para gestionar la autenticación y cookies)
+  |
+  ├── public/
+  |   ├── ...
+  |
+  ├── package.json
+  └── ...

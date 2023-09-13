@@ -1,25 +1,12 @@
 import React from "react";
-import { useEffect } from "react";
-import PropTypes from "prop-types";
-import Router from "next/router";
-import { withUser } from "@/hoc/withUser";
+import LoginContainer from "@/containers/Login";
 
-const Login = ({ user, token }) => {
-  useEffect(() => {
-    if (!user) {
-      Router.push("/login");
-    }
-  }, []);
+const Login = () => {
   return (
-    <div>
-      <p>user: {user}</p>
-      <p>token: {token}</p>
-    </div>
+    <>
+      <LoginContainer />
+    </>
   );
 };
 
-Login.propTypes = {
-  user: PropTypes.object,
-};
-
-export default withUser(Login);
+export default Login;

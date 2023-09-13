@@ -1,0 +1,125 @@
+@use "../global/variables" as v;
+
+.whatsapp-btn {
+  color: v.$white;
+  text-align: center;
+  padding: 10px 20px;
+  border-radius: 4px;
+  text-decoration: none;
+}
+// Estilos para el botón de WhatsApp
+.whatsapp-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+
+  button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    padding: 0;
+    background-color: v.$green;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 24px;
+    color: v.$white;
+    box-shadow: 0px 2px 5px v.$boxShadowOpacity;
+    transition: all 0.3s ease;
+    border: none;
+
+    &:hover {
+      width: 48px;
+      height: 48px;
+      cursor: pointer;
+    }
+  }
+
+  .icon-wp {
+    margin: 0;
+    padding: 0;
+    &:hover {
+      transition: all 0.3s ease-in-out;
+      font-size: 30px;
+    }
+  }
+}
+
+// Estilos para el chat de WhatsApp
+.whatsapp-chat {
+  position: fixed;
+  bottom: 80px;
+  right: 26px;
+  width: 320px;
+  height: 280px;
+  background-color: v.$white;
+  box-shadow: 0px 2px 5px v.$boxShadowOpacity;
+  border-radius: 5px;
+  overflow: hidden;
+  z-index: 998;
+
+  .whatsapp-header {
+    background-color: v.$green;
+    color: v.$white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    h4 {
+      margin: 0;
+      font-size: 18px;
+    }
+
+    .whatsapp-close {
+      font-size: 24px;
+      cursor: pointer;
+    }
+  }
+
+  .whatsapp-body {
+    padding: 20px;
+    height: calc(100% - 100px);
+
+    textarea {
+      width: 100%;
+      height: 100%;
+      border: none;
+      resize: none;
+      font-size: 16px;
+      padding: 10px;
+      border-radius: 5px;
+
+      &:focus {
+        border: v.$green solid 2px;
+        outline: none;
+      }
+    }
+  }
+
+  .whatsapp-footer {
+    background-color: v.$white;
+    display: flex;
+    justify-content: flex-end;
+
+    a {
+      width: 100%;
+    }
+    a button {
+      border: none;
+      background-color: v.$green;
+      color: v.$white;
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+      width: 100%;
+
+      &:hover {
+        background-color: v.$greenHover;
+      }
+    }
+  }
+}

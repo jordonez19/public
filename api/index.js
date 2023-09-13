@@ -13,14 +13,9 @@ const showMessage = (type, content) => {
 const handleRequest = async (requestFunction, url, jsonData, params = {}) => {
   try {
     const res = await requestFunction(url, jsonData, { params });
-    const { content, message: responseMessage } = res.data;
-    if (responseMessage) {
-      showMessage("success", responseMessage);
-    }
-    return content;
+    return res
   } catch (error) {
     console.error("Error en la solicitud", error);
-    showMessage("error", "Error al procesar la solicitud.");
     return [];
   }
 };
@@ -32,6 +27,7 @@ const get = async (path, token) => {
 
 const post = async (path, jsonData, token) => {
   const url = `${apiUrl}${path}`;
+
   return handleRequest(axios.post, url, jsonData);
 };
 

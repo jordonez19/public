@@ -1,0 +1,42 @@
+@use "variables" as v;
+
+@mixin respond-to($media) {
+  @if $media == "small" {
+    @media (max-width: v.$small) {
+      @content;
+    }
+  } @else if $media == "medium" {
+    @media (min-width: v.$medium) {
+      @content;
+    }
+  } @else if $media == "large" {
+    @media (min-width: v.$large) {
+      @content;
+    }
+  } @else if $media == "xlarge" {
+    @media (min-width: v.$xlarge) {
+      @content;
+    }
+  }
+}
+
+/* 
+
+example 
+  div {
+  background-color: #f0f0f0;
+  
+  @include respond-to("medium") {
+    background-color: #e0e0e0;
+  }
+  
+  @include respond-to("large") {
+    background-color: #d0d0d0;
+  }
+  
+  @include respond-to("xlarge") {
+    background-color: #c0c0c0;
+  }
+}
+  
+  */
