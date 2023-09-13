@@ -5,8 +5,19 @@ import {
   FacebookOutlined,
   LinkedinOutlined,
 } from "@ant-design/icons";
+import { useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faUser,
+  faLock,
+  faEye,
+  faEyeSlash,
+  faChevronRight,
+} from "@fortawesome/free-solid-svg-icons";
 
 const LoginComponent = ({ handleChange, handleSubmit }) => {
+  const [viewInput, setViewInput] = useState(false);
+
   return (
     <>
       <div className="body-login">
@@ -15,7 +26,7 @@ const LoginComponent = ({ handleChange, handleSubmit }) => {
             <div className="custom-screen__content">
               <form className="custom-login" onSubmit={handleSubmit}>
                 <div className="custom-login__field">
-                  <i className="custom-login__icon fas fa-user"></i>
+                  <FontAwesomeIcon icon={faUser} />
                   <input
                     onChange={handleChange}
                     type="text"
@@ -25,49 +36,44 @@ const LoginComponent = ({ handleChange, handleSubmit }) => {
                   />
                 </div>
                 <div className="custom-login__field">
-                  <i className="custom-login__icon fas fa-lock"></i>
+                  <FontAwesomeIcon icon={faLock} />
                   <input
                     onChange={handleChange}
-                    type="password"
+                    type={viewInput ? "text" : "password"}
                     name="password"
                     className="custom-login__input"
                     placeholder="Password"
                   />
+                  <FontAwesomeIcon
+                    className="cursor-pointer"
+                    onClick={() => setViewInput(!viewInput)}
+                    icon={!viewInput ? faEye : faEyeSlash}
+                  />
                 </div>
-                <button className="custom-button custom-login__submit">
-                  <span className="custom-button__text text-center">INGRESAR</span>
-                  <i className="custom-button__icon fanpm audit fix --forces fa-chevron-right"></i>
+                <button className="custom-button custom-login__submit pulse">
+                  <span className="custom-button__text text-center">
+                    INGRESAR
+                  </span>
+                  <FontAwesomeIcon
+                    className="custom-button__icon fanpm audit fix--forces"
+                    icon={faChevronRight}
+                  />
                 </button>
               </form>
               <div className="custom-social-login">
-
-                <div className="d-flex">
-                  <Avatar
-                    className="me-2"
-                    size={40}
-                    icon={<GoogleOutlined />}
-                  />
-                  <Avatar
-                    className="me-2"
-                    size={40}
-                    icon={<FacebookOutlined />}
-                  />
-                  <Avatar className="me-2" size={40} icon={<LinkedinOutlined />} />
-                </div>
-
                 <div className="custom-social-icons">
                   <a
                     href="#"
-                    className="custom-social-login__icon fab fa-instagram"
-                  ></a>
+                    className="custom-social-login__icon"
+                  >i</a>
                   <a
                     href="#"
-                    className="custom-social-login__icon fab fa-facebook"
-                  ></a>
+                    className="custom-social-login__icon"
+                  >f</a>
                   <a
                     href="#"
-                    className="custom-social-login__icon fab fa-twitter"
-                  ></a>
+                    className="custom-social-login__icon"
+                  >g</a>
                 </div>
               </div>
             </div>

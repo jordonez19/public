@@ -12,8 +12,8 @@ export const CustomAlert = () => {
       showConfirmButton: false,
       timer: 1500,
       customClass: {},
-      iconColor: "#fd7e14",
-      confirmButtonColor: "#fd7e14",
+      iconColor: "#4FCA5D",
+      confirmButtonColor: "#6770B5",
     }).then(() => {
       if (path) {
         router.push(`/nexos/${path}`);
@@ -27,8 +27,8 @@ export const CustomAlert = () => {
       icon: "error",
       title: message,
       confirmButtonText: "OK",
-      iconColor: "#fd7e14",
-      confirmButtonColor: "#fd7e14",
+      iconColor: "red",
+      confirmButtonColor: "#6770B5",
     });
     if (path) {
       router.push(`/nexos/${path}`);
@@ -40,8 +40,8 @@ export const CustomAlert = () => {
       icon: "info",
       title: message,
       confirmButtonText: "OK",
-      iconColor: "#fd7e14",
-      confirmButtonColor: "#fd7e14",
+      iconColor: "#F7C359",
+      confirmButtonColor: "#6770B5",
     });
     if (path) {
       router.push(`/nexos/${path}`);
@@ -55,23 +55,9 @@ export const CustomAlert = () => {
       showCancelButton: true,
       confirmButtonText: "Si",
       cancelButtonText: "No",
-      iconColor: "#fd7e14",
-      confirmButtonColor: "#fd7e14",
+      iconColor: "#F7C359",
+      confirmButtonColor: "#6770B5",
     });
-
-    return result;
-  };
-
-  const AcceptConfirmation = async (message) => {
-    const result = await Swal.fire({
-      icon: "info",
-      title: message,
-      showCancelButton: false,
-      confirmButtonText: "Ok",
-      iconColor: "#fd7e14",
-      confirmButtonColor: "#fd7e14",
-    });
-
     return result;
   };
 
@@ -80,7 +66,6 @@ export const CustomAlert = () => {
     SuccessAlert,
     ErrorAlert,
     EditConfirmation,
-    AcceptConfirmation,
     InfoAlert,
   };
 };

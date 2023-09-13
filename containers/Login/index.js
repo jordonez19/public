@@ -3,19 +3,22 @@ import LoginComponent from "@/components/Login";
 import React, { useState } from "react";
 import { setAuthToken } from "@/lib/auth";
 import { CustomAlert } from "@/hooks/CustomAlert";
+import { useRouter } from "next/router";
 
 const LoginContainer = () => {
-  const [form, setForm] = useState({});
   const { SuccessAlert, ErrorAlert } = CustomAlert();
+  const [form, setForm] = useState({});
+  const router = useRouter();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     const res = await post("auth/signin", form);
     if (res.status == 200) {
       setAuthToken(res.data.token);
-      SuccessAlert('Bienvenido');
+      SuccessAlert("Bienvenido");
+      router.push("/dashboard");
     } else {
-      ErrorAlert('Error al iniciar session');
+      ErrorAlert("Error al iniciar session, verifique que su usuario y contraseña sean correctos");
     }
   };
 
@@ -29,7 +32,8 @@ const LoginContainer = () => {
 
   return (
     <>
-      <LoginComponent handleSubmit={handleSubmit} handleChange={handleChange} />
+      <LoginComponent
+        handleSubmit={handleSubmit} handleChange={handleChange} />
     </>
   );
 };

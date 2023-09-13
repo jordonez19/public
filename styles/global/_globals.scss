@@ -5,36 +5,3 @@
   padding: 0;
   box-sizing: border-box;
 }
-
-html,
-body {
-  background: v.$primary;
-  color: v.$secondary;
-  min-height: 90vh;
-}
-
-p{
-  font-size: 20px;
-}
-
-.svg-head {
-  position: absolute;
-  z-index: 1;
-  path {
-    z-index: 1;
-  }
-}
-.content {
-  min-height: 90vh;
-  z-index: 2;
-  position: relative;
-}
-
-.content2{
-  margin-top: 4cm;
-}
-.flex{
-  display: grid;
-  gap: 1rem;
-  grid-template-columns: repeat(auto-fill, minmax(15rem,1fr));
-}

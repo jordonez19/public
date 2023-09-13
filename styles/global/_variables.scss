@@ -1,10 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
 //colors
-$primary: #e0eef3;
-$primary2: #9ed0f2;
-$primaryDark: #283d8c;
-$secondary: #c7344e;
-$primaryM: #1976d2;
+$primary-color: #6770B5;
+$secondary-color: #C4BEDF;
+$accent-color: #3B647C;
+$success-color: #8EB031;
+$warning-color: #F7C359;
+$asda: #c7c5f4;
+$asd: #7c78b8;
+$aasd: #776bcc;
+
+$background-linear: linear-gradient(45deg, #cfcef3, #8479d8);
+$background-linear2: linear-gradient(90deg, #5d54a4, #7c78b8);
+
+//whatsapp
 $green: #25d366;
 $boxShadowOpacity: #0000004d;
 $greenHover: #128c7e;
@@ -37,7 +45,6 @@ $headerHeight: 80px;
 
 @mixin breakpoint($point) {
   @if $point == md {
-    // 768px
     @media (min-width: 48em) {
       @content;
     }
