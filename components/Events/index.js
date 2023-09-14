@@ -5,27 +5,27 @@ import React from "react";
 const Events = () => {
   return (
     <>
-      <div class="section events" id="events">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-12 text-center">
-              <div class="section-heading">
+      <div className="section events" id="events">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-12 text-center">
+              <div className="section-heading">
                 <h6>Schedule</h6>
                 <h2>Upcoming Events</h2>
               </div>
             </div>
-            <div class="col-lg-12 col-md-6">
-              <div class="item">
-                <div class="row">
-                  <div class="col-lg-3">
-                    <div class="image">
+            <div className="col-lg-12 col-md-6">
+              <div className="item">
+                <div className="row">
+                  <div className="col-lg-3">
+                    <div className="image">
                       <img src="assets/images/event-01.jpg" alt="" />
                     </div>
                   </div>
-                  <div class="col-lg-9">
+                  <div className="col-lg-9">
                     <ul>
                       <li>
-                        <span class="category">Web Design</span>
+                        <span className="category">Web Design</span>
                         <h4>UI Best Practices</h4>
                       </li>
                       <li>
@@ -42,24 +42,24 @@ const Events = () => {
                       </li>
                     </ul>
                     <Link href="#">
-                      <i class="fa fa-angle-right"></i>
+                      <i className="fa fa-angle-right"></i>
                     </Link>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="col-lg-12 col-md-6">
-              <div class="item">
-                <div class="row">
-                  <div class="col-lg-3">
-                    <div class="image">
+            <div className="col-lg-12 col-md-6">
+              <div className="item">
+                <div className="row">
+                  <div className="col-lg-3">
+                    <div className="image">
                       <img src="assets/images/event-02.jpg" alt="" />
                     </div>
                   </div>
-                  <div class="col-lg-9">
+                  <div className="col-lg-9">
                     <ul>
                       <li>
-                        <span class="category">Front End</span>
+                        <span className="category">Front End</span>
                         <h4>New Design Trend</h4>
                       </li>
                       <li>
@@ -76,24 +76,24 @@ const Events = () => {
                       </li>
                     </ul>
                     <Link href="#">
-                      <i class="fa fa-angle-right"></i>
+                      <i className="fa fa-angle-right"></i>
                     </Link>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="col-lg-12 col-md-6">
-              <div class="item">
-                <div class="row">
-                  <div class="col-lg-3">
-                    <div class="image">
+            <div className="col-lg-12 col-md-6">
+              <div className="item">
+                <div className="row">
+                  <div className="col-lg-3">
+                    <div className="image">
                       <img src="assets/images/event-03.jpg" alt="" />
                     </div>
                   </div>
-                  <div class="col-lg-9">
+                  <div className="col-lg-9">
                     <ul>
                       <li>
-                        <span class="category">Full Stack</span>
+                        <span className="category">Full Stack</span>
                         <h4>Web Programming</h4>
                       </li>
                       <li>
@@ -110,7 +110,7 @@ const Events = () => {
                       </li>
                     </ul>
                     <Link href="#">
-                      <i class="fa fa-angle-right"></i>
+                      <i className="fa fa-angle-right"></i>
                     </Link>
                   </div>
                 </div>

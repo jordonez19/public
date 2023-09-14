@@ -4,11 +4,11 @@ import React from "react";
 const Contactus = () => {
   return (
     <>
-      <div class="contact-us section" id="contact">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-6  align-self-center">
-              <div class="section-heading">
+      <div className="contact-us section" id="contact">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-6  align-self-center">
+              <div className="section-heading">
                 <h6>Contact Us</h6>
                 <h2>Feel free to contact us anytime</h2>
                 <p>
@@ -16,8 +16,8 @@ const Contactus = () => {
                   templates at absolutely 100% free of charge. You may support
                   us by sharing our website to your friends.
                 </p>
-                <div class="special-offer">
-                  <span class="offer">
+                <div className="special-offer">
+                  <span className="offer">
                     off
                     <br />
                     <em>50%</em>
@@ -29,28 +29,28 @@ const Contactus = () => {
                     Special Offer <em>50%</em> OFF!
                   </h4>
                   <Link href="#">
-                    <i class="fa fa-angle-right"></i>
+                    <i className="fa fa-angle-right"></i>
                   </Link>
                 </div>
               </div>
             </div>
-            <div class="col-lg-6">
-              <div class="contact-us-content">
+            <div className="col-lg-6">
+              <div className="contact-us-content">
                 <form id="contact-form" action="" method="post">
-                  <div class="row">
-                    <div class="col-lg-12">
+                  <div className="row">
+                    <div className="col-lg-12">
                       <fieldset>
                         <input
                           type="name"
                           name="name"
                           id="name"
                           placeholder="Your Name..."
-                          autocomplete="on"
+                          autoComplete="on"
                           required
                         />
                       </fieldset>
                     </div>
-                    <div class="col-lg-12">
+                    <div className="col-lg-12">
                       <fieldset>
                         <input
                           type="text"
@@ -62,7 +62,7 @@ const Contactus = () => {
                         />
                       </fieldset>
                     </div>
-                    <div class="col-lg-12">
+                    <div className="col-lg-12">
                       <fieldset>
                         <textarea
                           name="message"
@@ -71,12 +71,12 @@ const Contactus = () => {
                         ></textarea>
                       </fieldset>
                     </div>
-                    <div class="col-lg-12">
+                    <div className="col-lg-12">
                       <fieldset>
                         <button
                           type="submit"
                           id="form-submit"
-                          class="orange-button"
+                          className="orange-button"
                         >
                           Send Message Now
                         </button>

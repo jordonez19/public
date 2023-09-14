@@ -5,19 +5,19 @@ import React from "react";
 const Courses = () => {
   return (
     <div>
-      <section class="section courses" id="courses">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-12 text-center">
-              <div class="section-heading">
+      <section className="section courses" id="courses">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-12 text-center">
+              <div className="section-heading">
                 <h6>Latest Courses</h6>
                 <h2>Latest Courses</h2>
               </div>
             </div>
           </div>
-          <ul class="event_filter">
+          <ul className="event_filter">
             <li>
-              <Link class="is_active" href="#!" data-filter="*">
+              <Link className="is_active" href="#!" data-filter="*">
                 Show All
               </Link>
             </li>
@@ -37,117 +37,117 @@ const Courses = () => {
               </Link>
             </li>
           </ul>
-          <div class="row event_box">
-            <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 design">
-              <div class="events_item">
-                <div class="thumb">
+          <div className="row event_box">
+            <div className="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 design">
+              <div className="events_item">
+                <div className="thumb">
                   <Link href="#">
                     <img src="assets/images/course-01.jpg" alt="" />
                   </Link>
-                  <span class="category">Webdesign</span>
-                  <span class="price">
+                  <span className="category">Webdesign</span>
+                  <span className="price">
                     <h6>
                       <em>$</em>160
                     </h6>
                   </span>
                 </div>
-                <div class="down-content">
-                  <span class="author">Stella Blair</span>
+                <div className="down-content">
+                  <span className="author">Stella Blair</span>
                   <h4>Learn Web Design</h4>
                 </div>
               </div>
             </div>
-            <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6  development">
-              <div class="events_item">
-                <div class="thumb">
+            <div className="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6  development">
+              <div className="events_item">
+                <div className="thumb">
                   <Link href="#">
                     <img src="assets/images/course-02.jpg" alt="" />
                   </Link>
-                  <span class="category">Development</span>
-                  <span class="price">
+                  <span className="category">Development</span>
+                  <span className="price">
                     <h6>
                       <em>$</em>340
                     </h6>
                   </span>
                 </div>
-                <div class="down-content">
-                  <span class="author">Cindy Walker</span>
+                <div className="down-content">
+                  <span className="author">Cindy Walker</span>
                   <h4>Web Development Tips</h4>
                 </div>
               </div>
             </div>
-            <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 design wordpress">
-              <div class="events_item">
-                <div class="thumb">
+            <div className="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 design wordpress">
+              <div className="events_item">
+                <div className="thumb">
                   <Link href="#">
                     <img src="assets/images/course-03.jpg" alt="" />
                   </Link>
-                  <span class="category">Wordpress</span>
-                  <span class="price">
+                  <span className="category">Wordpress</span>
+                  <span className="price">
                     <h6>
                       <em>$</em>640
                     </h6>
                   </span>
                 </div>
-                <div class="down-content">
-                  <span class="author">David Hutson</span>
+                <div className="down-content">
+                  <span className="author">David Hutson</span>
                   <h4>Latest Web Trends</h4>
                 </div>
               </div>
             </div>
-            <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 development">
-              <div class="events_item">
-                <div class="thumb">
+            <div className="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 development">
+              <div className="events_item">
+                <div className="thumb">
                   <Link href="#">
                     <img src="assets/images/course-04.jpg" alt="" />
                   </Link>
-                  <span class="category">Development</span>
-                  <span class="price">
+                  <span className="category">Development</span>
+                  <span className="price">
                     <h6>
                       <em>$</em>450
                     </h6>
                   </span>
                 </div>
-                <div class="down-content">
-                  <span class="author">Stella Blair</span>
+                <div className="down-content">
+                  <span className="author">Stella Blair</span>
                   <h4>Online Learning Steps</h4>
                 </div>
               </div>
             </div>
-            <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 wordpress development">
-              <div class="events_item">
-                <div class="thumb">
+            <div className="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 wordpress development">
+              <div className="events_item">
+                <div className="thumb">
                   <Link href="#">
                     <img src="assets/images/course-05.jpg" alt="" />
                   </Link>
-                  <span class="category">Wordpress</span>
-                  <span class="price">
+                  <span className="category">Wordpress</span>
+                  <span className="price">
                     <h6>
                       <em>$</em>320
                     </h6>
                   </span>
                 </div>
-                <div class="down-content">
-                  <span class="author">Sophia Rose</span>
+                <div className="down-content">
+                  <span className="author">Sophia Rose</span>
                   <h4>Be a WordPress Master</h4>
                 </div>
               </div>
             </div>
-            <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 wordpress design">
-              <div class="events_item">
-                <div class="thumb">
+            <div className="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 wordpress design">
+              <div className="events_item">
+                <div className="thumb">
                   <Link href="#">
                     <img src="assets/images/course-06.jpg" alt="" />
                   </Link>
-                  <span class="category">Webdesign</span>
-                  <span class="price">
+                  <span className="category">Webdesign</span>
+                  <span className="price">
                     <h6>
                       <em>$</em>240
                     </h6>
                   </span>
                 </div>
-                <div class="down-content">
-                  <span class="author">David Hutson</span>
+                <div className="down-content">
+                  <span className="author">David Hutson</span>
                   <h4>Full Stack Developer</h4>
                 </div>
               </div>

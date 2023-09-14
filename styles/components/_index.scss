@@ -1,4 +1,24 @@
-@forward "whatsapp";
+//Login
 @forward "login";
-@forward "navbar";
+//dashboard
 @forward "ShoppingCart";
+
+//Sections MainSite
+@forward "all";
+@forward "navbar";
+@forward "footer";
+
+/* 
+@forward "Banner";
+@forward "Services";
+@forward "Aboutus";
+@forward "Courses";
+@forward "Funfacts";
+@forward "Team";
+@forward "Testimonials";
+@forward "Events";
+@forward "Contactus";
+ */
+
+//Features
+@forward "whatsapp";

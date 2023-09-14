@@ -5,25 +5,16 @@ const Footer = () => {
   return (
     <>
       <footer>
-        <div class="container">
-          <div class="col-lg-12">
+        <div className="container">
+          <div className="col-lg-12">
             <p>
               Copyright © 2036 Scholar Organization. All rights reserved.
               &nbsp;&nbsp;&nbsp; Design:{" "}
-              <Link href="https://templatemo.com" rel="nofollow" target="_blank">
-                TemplateMo
-              </Link>
-            </p>
-          </div>
-        </div>
-      </footer>
-      <footer>
-        <div class="container">
-          <div class="col-lg-12">
-            <p>
-              Copyright © 2036 Scholar Organization. All rights reserved.
-              &nbsp;&nbsp;&nbsp; Design:{" "}
-              <Link href="https://templatemo.com" rel="nofollow" target="_blank">
+              <Link
+                href="https://templatemo.com"
+                rel="nofollow"
+                target="_blank"
+              >
                 TemplateMo
               </Link>
             </p>

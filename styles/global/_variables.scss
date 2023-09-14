@@ -1,22 +1,26 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
 //colors
-$primary-color: #6770B5;
+$primary-color: #7B6ADA;
 $secondary-color: #C4BEDF;
 $accent-color: #3B647C;
 $success-color: #8EB031;
 $warning-color: #F7C359;
-$asda: #c7c5f4;
-$asd: #7c78b8;
-$hover-color: #776bcc;
+$hover-color: #7b6ee0;
 
+//shadows
+$boxshadow: 0 0 5px gray;
+
+//backgrounds
 $background-linear: linear-gradient(45deg, #cfcef3, #8479d8);
 $background-linear2: linear-gradient(90deg, #5d54a4, #7c78b8);
+
 
 //whatsapp
 $green: #25d366;
 $boxShadowOpacity: #0000004d;
 $greenHover: #128c7e;
 
+$light: #ddd;
 $white: #fff;
 $black: #000;
 

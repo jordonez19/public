@@ -55,22 +55,19 @@ const Navbar = () => {
   const ctaClickHandler = () => {
     menuToggleHandler();
   };
-
+  console.log(menuOpen ? "isMenu" : "no menu");
+  useEffect(() => {
+    setMenuOpen(false);
+  }, []);
   return (
     <>
-      <header
-        className={`header  ${isFixed ? "fixed-navbar" : "" }`}
-      >
+      <header className={`header  ${isFixed ? "fixed-navbar" : ""}`}>
         <div className={"header__content"}>
           <img className="logo-img" src="Novakademia2.png" alt="logo-img" />
           <Link href="/" className={"header__content__logo"}>
             Novakademia
           </Link>
-          <nav
-            className={`header__content__nav ${
-              menuOpen && size.width < 768 ? "isMenu" : ""
-            }`}
-          >
+          <nav className={`header__content__nav ${menuOpen ? "isMenu" : ""}`}>
             <ul>
               <li>
                 <Link href="/" onClick={menuToggleHandler}>
@@ -88,11 +85,12 @@ const Navbar = () => {
                 </Link>
               </li>
             </ul>
-
-            <button onClick={ctaClickHandler}>Ingresar</button>
-            <ul>
-              <li>
-                <ShoppingCart />
+            <button className="me-2" onClick={ctaClickHandler}>
+              Ingresar
+            </button>
+            <ul className="text-center">
+              <li className="text-center">
+                <ShoppingCart itemCount={9} />
               </li>
             </ul>
           </nav>

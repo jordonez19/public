@@ -3,7 +3,7 @@ import React from "react";
 import { ShoppingCartOutlined } from "@ant-design/icons";
 import Link from "next/link";
 
-const ShoppingCart = ({ itemCount = 5 }) => {
+const ShoppingCart = ({ itemCount }) => {
   return (
     <>
       {itemCount > 0 ? (
