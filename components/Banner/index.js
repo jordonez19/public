@@ -28,48 +28,6 @@ const Banner = () => {
                     </div>
                   </div>
                 </div>
-                {/* <div className="item item-2">
-                  <div className="header-text">
-                    <span className="category">Best Result</span>
-                    <h2>Get the best result out of your effort</h2>
-                    <p>
-                      You are allowed to use this template for any educational
-                      or commercial purpose. You are not allowed to
-                      re-distribute the template ZIP file on any other website.
-                    </p>
-                    <div className="buttons">
-                      <div className="main-button">
-                        <Link href="#">Request Demo</Link>
-                      </div>
-                      <div className="icon-button">
-                        <Link href="#">
-                          <i className="fa fa-play"></i> Whats the best result?
-                        </Link>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="item item-3">
-                  <div className="header-text">
-                    <span className="category">Online Learning</span>
-                    <h2>Online Learning helps you save the time</h2>
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed do eiusmod temporious incididunt ut labore et dolore
-                      magna aliqua suspendisse.
-                    </p>
-                    <div className="buttons">
-                      <div className="main-button">
-                        <Link href="#">Request Demo</Link>
-                      </div>
-                      <div className="icon-button">
-                        <Link href="#">
-                          <i className="fa fa-play"></i> Whats Online Course?
-                        </Link>
-                      </div>
-                    </div>
-                  </div>
-                </div> */}
               </div>
             </div>
           </div>
