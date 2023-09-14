@@ -8,14 +8,14 @@ const Footer = () => {
         <div className="container">
           <div className="col-lg-12">
             <p>
-              Copyright © 2036 Scholar Organization. All rights reserved.
-              &nbsp;&nbsp;&nbsp; Design:{" "}
+              Copyright © 2023 todos los derechos reservados. &nbsp;&nbsp;&nbsp;
+              Diseñado:{" "}
               <Link
-                href="https://templatemo.com"
+                href="https://dev.miremor.com/"
                 rel="nofollow"
                 target="_blank"
               >
-                TemplateMo
+                XavisDev
               </Link>
             </p>
           </div>
