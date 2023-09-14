@@ -15,7 +15,7 @@
   transition: all 0.3s ease;
   position: absolute;
 
-  @include v.breakpoint(md) {
+  @include v.breakpoint(md-custom) {
     padding: 0 3rem;
   }
 
@@ -62,7 +62,7 @@
       transform: translate(0);
       transition: 0.3s ease transform;
 
-      @include v.breakpoint(md) {
+      @include v.breakpoint(md-custom) {
         transform: none;
         flex-direction: row;
         background: transparent;
@@ -76,7 +76,7 @@
         display: flex;
         flex-direction: column;
         margin-bottom: v.$spacing-lg;
-        @include v.breakpoint(md) {
+        @include v.breakpoint(md-custom) {
           flex-direction: row;
           align-items: center;
           margin-bottom: 0;
@@ -85,7 +85,7 @@
         li {
           &:not(:last-child) {
             margin-bottom: v.$spacing-lg;
-            @include v.breakpoint(md) {
+            @include v.breakpoint(md-custom) {
               margin-bottom: 0;
               margin-right: v.$spacing-md;
             }
@@ -154,7 +154,7 @@
       &:hover {
         color: v.$secondary-color;
       }
-      @include v.breakpoint(md) {
+      @include v.breakpoint(md-custom) {
         display: none;
       }
     }
@@ -166,4 +166,9 @@
   left: 0;
   width: 100%;
   z-index: 1000; 
+}
+
+.fixed {
+  position: fixed;
+
 }
