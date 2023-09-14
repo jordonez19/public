@@ -1,10 +1,3 @@
-import { Avatar, Space } from "antd";
-import {
-  UserOutlined,
-  GoogleOutlined,
-  FacebookOutlined,
-  LinkedinOutlined,
-} from "@ant-design/icons";
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -14,6 +7,7 @@ import {
   faEyeSlash,
   faChevronRight,
 } from "@fortawesome/free-solid-svg-icons";
+import Link from "next/link";
 
 const LoginComponent = ({ handleChange, handleSubmit }) => {
   const [viewInput, setViewInput] = useState(false);
@@ -62,18 +56,18 @@ const LoginComponent = ({ handleChange, handleSubmit }) => {
               </form>
               <div className="custom-social-login">
                 <div className="custom-social-icons">
-                  <a
+                  <Link
                     href="#"
                     className="custom-social-login__icon"
-                  >i</a>
-                  <a
+                  >i</Link>
+                  <Link
                     href="#"
                     className="custom-social-login__icon"
-                  >f</a>
-                  <a
+                  >f</Link>
+                  <Link
                     href="#"
                     className="custom-social-login__icon"
-                  >g</a>
+                  >g</Link>
                 </div>
               </div>
             </div>

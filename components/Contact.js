@@ -20,9 +20,8 @@ const Contactanos = () => {
     const handlePost = async (data) => {
     try {
       await post("mailto", data);
-      //success();
     } catch (error) {
-      //errorMessage();
+      console.error(error)
     }
   };
 
