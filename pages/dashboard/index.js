@@ -1,11 +1,20 @@
-import React from 'react'
+import React from "react";
+import { ConfigProvider, Button } from "antd";
+import esES from "antd/lib/locale/es_ES";
+import "./App.css";
 
-const dashboard = () => {
+const theme = {
+  primaryColor: "#7B6ADA",
+};
+
+const Dashboard = () => {
   return (
-    <div>
-      <h1>dashboard</h1>
-    </div>
-  )
-}
-
-export default dashboard
+    <ConfigProvider locale={esES} theme={theme}>
+      <h2>what</h2>
+      <Button type="primary">
+        <h1>dashboard</h1>
+      </Button>
+    </ConfigProvider>
+  );
+};
+export default Dashboard;
