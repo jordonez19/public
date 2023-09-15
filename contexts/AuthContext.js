@@ -17,7 +17,7 @@ export const AuthProvider = ({ children }) => {
   };
 
   useEffect(() => {
-    const token = getAuthToken();
+    getAuthToken();
   }, []);
 
   return (

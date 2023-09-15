@@ -2,6 +2,9 @@ import Link from "next/link";
 import React from "react";
 
 const Banner = () => {
+  
+  const image = `/assets/images/banner-item-01.jpg`;
+
   return (
     <>
       <div className="main-banner" id="top">
@@ -9,23 +12,59 @@ const Banner = () => {
           <div className="row">
             <div className="col-lg-12">
               <div className="owl-carousel owl-banner">
-                <div className="item item-1">
-                  <div className="header-text">
-                    <span className="category">Nuestros Cursos</span>
-                    <h2>Con Profesores Académicos, Todo Es Más Fácil</h2>
-                    <p>
-                     Nuestros cursos de derecho proporcionan una formación sólida en las diversas áreas legales, equipando a los estudiantes con las habilidades necesarias para destacar en el campo legal.
+                <div
+                  className="item"
+                  style={{
+                    backgroundImage: `url("${image}")`,
+                  }}
+                >
+                  <div className="header-text text-center text-sm-center text-md-start text-lg-start">
+                    <span className="category bg-primary-color text-white px-3 py-1 rounded mb-2">
+                      Nuestros Cursos
+                    </span>
+                    <h2 className="text-white mt-4">
+                      Con Profesores Académicos, Todo Es Más Fácil
+                    </h2>
+                    <p className="text-white mt-3">
+                      Nuestros cursos de derecho proporcionan una formación
+                      sólida en las diversas áreas legales, equipando a los
+                      estudiantes con las habilidades necesarias para destacar
+                      en el campo legal.
                     </p>
-                    <div className="buttons">
+
+                    <div className="buttons d-sm-flex flex-column flex-lg-row mt-5 align-items-center">
                       <div className="main-button">
-                        <Link href="#">Solicitar Accesoria</Link>
+                        <Link href="#" className="btn btn-primary-color">
+                          Solicitar Asesoría
+                        </Link>
                       </div>
                       <div className="icon-button">
-                        <Link href="#">
-                          <i className="fa fa-play"></i> ¿Qué es Novakademia?
+                        <Link
+                          href="#"
+                          className="btn btn-outline-primary-color"
+                        >
+                          <i className="fa fa-play me-2"></i>¿Qué es
+                          Novakademia?
                         </Link>
                       </div>
                     </div>
+                  </div>
+
+                  <div className="mt-4 position-absolute buttons__banner-container">
+                    <button
+                      type="button"
+                      role="presentation"
+                      className="btn-banner me-1"
+                    >
+                      <i className="fa fa-angle-left" aria-hidden="true"></i>
+                    </button>
+                    <button
+                      type="button"
+                      role="presentation"
+                      className="btn-banner"
+                    >
+                      <i className="fa fa-angle-right" aria-hidden="true"></i>
+                    </button>
                   </div>
                 </div>
               </div>

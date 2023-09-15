@@ -1,0 +1,127 @@
+@use "../global/variables" as v;
+
+.main-banner {
+  background-image: url("/assets/images/banner-bg.jpg");
+
+  background-position: right bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 170px 0px 120px 0px;
+}
+.header-text {
+  width: 100%;
+  @include v.breakpoint(md-custom) {
+    width: 50%;
+  }
+}
+
+.main-banner .item {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  border-radius: 25px;
+  padding: 100px 100px;
+  position: relative;
+}
+
+.main-banner .item span.category {
+  background-color: #7a6ad8;
+  color: #fff;
+  font-size: 14px;
+  text-transform: uppercase;
+  padding: 5px 15px;
+  border-radius: 20px;
+  display: inline-block;
+}
+
+.main-banner .item h2 {
+  font-size: 48px;
+  font-weight: 700;
+  color: #fff;
+  line-height: 70px;
+}
+
+.main-banner .item p {
+  color: #fff;
+}
+
+.main-banner .item .buttons {
+  display: flex;
+}
+
+.main-banner .item .buttons .main-button a {
+  font-size: 14px;
+  color: #7a6ad8;
+  background-color: #fff;
+  display: inline-block;
+  height: 50px;
+  line-height: 50px;
+  padding: 0px 25px;
+  border-radius: 25px;
+  font-weight: 500;
+}
+
+.main-banner .item .buttons .icon-button i {
+  color: #7a6ad8;
+  background-color: #fff;
+  display: inline-block;
+  height: 50px;
+  width: 50px;
+  text-align: center;
+  line-height: 50px;
+  border-radius: 50%;
+  font-size: 16px;
+}
+
+.main-banner .item .buttons .icon-button a {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.main-banner .owl-nav {
+  position: absolute;
+  max-width: 1320px;
+  bottom: 23px;
+  left: 0;
+  text-align: right;
+}
+
+.main-banner .owl-nav .owl-prev i,
+.main-banner .owl-nav .owl-next i {
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  font-size: 24px;
+  display: inline-block;
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  opacity: 1;
+  transition: all 0.3s;
+}
+
+.buttons__banner-container {
+  position: relative;
+  right: 20px;
+  @include v.breakpoint(mdx) {
+    right: 0;
+    left: 0;
+    margin: auto;
+  }
+}
+.btn-banner {
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  font-size: 24px;
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  opacity: 1;
+  transition: all 0.3s;
+  border: none;
+}
+.btn-banner:hover {
+  background-color: rgba(255, 255, 255, 0.479);
+}
