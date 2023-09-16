@@ -2,9 +2,19 @@ import axios from "axios";
 
 const apiUrl = process.env.REACT_APP_API_URL || "http://localhost:3002/api/";
 
-const handleRequest = async (requestFunction, url, jsonData, params = {}) => {
+const handleRequest = async (requestFunction, url, data, token = null) => {
   try {
-    const res = await requestFunction(url, jsonData, { params });
+    const headers = token ? { "access-token": token } : {};
+    const config = {
+      headers,
+    };
+    let res;
+
+    if (data instanceof FormData) {
+      res = await requestFunction(url, data, config);
+    } else {
+      res = await requestFunction(url, data, config);
+    }
     return res.data;
   } catch (error) {
     if (error.response) {
@@ -21,26 +31,22 @@ const handleRequest = async (requestFunction, url, jsonData, params = {}) => {
 
 const get = async (path, token = null) => {
   const url = `${apiUrl}${path}`;
-  const headers = token ? { "access-token": token } : {};
-  return handleRequest(axios.get, url, null, { headers });
+  return handleRequest(axios.get, url, null, token);
 };
 
-const post = async (path, jsonData, token = null) => {
+const post = async (path, data, token = null) => {
   const url = `${apiUrl}${path}`;
-  const headers = token ? { "access-token": token } : {};
-  return handleRequest(axios.post, url, jsonData, { headers });
+  return handleRequest(axios.post, url, data, token);
 };
 
-const put = async (path, jsonData, token = null) => {
+const put = async (path, data, token = null) => {
   const url = `${apiUrl}${path}`;
-  const headers = token ? { "access-token": token } : {};
-  return handleRequest(axios.put, url, jsonData, { headers });
+  return handleRequest(axios.put, url, data, token);
 };
 
-const del = async (path, jsonData, token = null) => {
+const del = async (path, data, token = null) => {
   const url = `${apiUrl}${path}`;
-  const headers = token ? { "access-token": token } : {};
-  return handleRequest(axios.delete, url, jsonData, { headers });
+  return handleRequest(axios.delete, url, data, token);
 };
 
 export { get, post, put, del };

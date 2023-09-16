@@ -6,6 +6,7 @@ import Courses from "@/components/Courses";
 import Events from "@/components/Events";
 import Footer from "@/components/Footer";
 import Funfacts from "@/components/Funfacts";
+import S3Input from "@/components/ImageBase64/s3";
 import Preloader from "@/components/Loader";
 import Navbar from "@/components/Navbar";
 import Services from "@/components/Services";
@@ -26,15 +27,26 @@ export default function Home() {
       </Head>
 
       <MainLayout>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <S3Input />
+
+        {/* 
         <Banner />
         <Services />
         <Aboutus />
         <Courses />
-        <Funfacts />
         <Team />
+        <Funfacts />
         <Testimonials />
         <Events />
         <Contactus />
+         */}
       </MainLayout>
     </>
   );

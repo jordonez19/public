@@ -1,48 +1,66 @@
 /* eslint-disable @next/next/no-img-element */
 import { useEffect, useState } from "react";
 import AWS from "aws-sdk";
+import { post } from "@/api";
 
 const s3 = new AWS.S3();
 
 const ImageDisplay = ({ imageUrl }) => {
-  const [imageData, setImageData] = useState(null);
+  const [data, setData] = useState({
+    name: "",
+    image: null,
+  });
 
-  useEffect(() => {
-    // Función para cargar la imagen desde S3
-    const loadImageFromS3 = async () => {
-      try {
-        const response = await s3
-          .getObject({ Bucket: "bucket-preguntepues", Key: imageUrl })
-          .promise();
+  const handlePost = async (e) => {
+    try {
+      e.preventDefault();
+      const formData = new FormData();
+      formData.append("name", data.name);
+      formData.append("image", data.image);
 
-        // Convierte los datos binarios en una URL de imagen
-        const imageDataUrl = `data:image/jpeg;base64,${Buffer.from(
-          response.Body
-        ).toString("base64")}`;
-        setImageData(imageDataUrl);
-      } catch (error) {
-        console.error("Error al cargar la imagen desde S3:", error);
-      }
-    };
-
-    if (imageUrl) {
-      loadImageFromS3();
+      await post("imagesbanner/s3", formData);
+      alert("yes");
+    } catch (error) {
+      console.error(error);
     }
-  }, [imageUrl]);
+  };
 
   return (
-    <div>
+    <div className="bg-primary text-center">
+      <h2>Formulario</h2>
+      <div className="col-lg-12">
+        <fieldset>
+          <input
+            type="text"
+            name="name"
+            placeholder="Your Text ..."
+            required=""
+            onChange={(e) => setData({ ...data, name: e.target.value })}
+          />
+        </fieldset>
+        <fieldset>
+          <input
+            type="file"
+            name="image"
+            required=""
+            onChange={(e) => setData({ ...data, image: e.target.files[0] })}
+          />
+        </fieldset>
+      </div>
+      <button onClick={handlePost}>Subir</button>
+
+      {/* 
       {imageData ? (
         <img src={imageData} alt="Imagen desde S3" />
       ) : (
         <p>Cargando imagen...</p>
       )}
+ */}
     </div>
   );
 };
 
 export default ImageDisplay;
-
 
 /* 
 import ImageDisplay from "../components/ImageDisplay";
