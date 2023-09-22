@@ -33,10 +33,9 @@ export default function Home() {
         <br />
         <br />
         <br />
-        <br />
-        <S3Input />
+        <S3Input /> 
+        {/* <br />
 
-        {/* 
         <Banner />
         <Services />
         <Aboutus />
@@ -46,7 +45,7 @@ export default function Home() {
         <Testimonials />
         <Events />
         <Contactus />
-         */}
+      */}
       </MainLayout>
     </>
   );

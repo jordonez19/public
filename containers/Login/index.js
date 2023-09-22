@@ -13,8 +13,8 @@ const LoginContainer = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const res = await post("auth/signin", form);
-    if (res.status == 200) {
-      setAuthToken(res.data.token);
+     if (!!res.token) {
+      setAuthToken(res.token);
       SuccessAlert("Bienvenido");
       router.push("/dashboard");
     } else {

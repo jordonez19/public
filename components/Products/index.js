@@ -1,43 +1,79 @@
+import { Input, Table } from "antd";
 import React, { useState } from "react";
-import CreateOrEditProduct from "./CreateOrEditProduct";
-import { Button, Drawer } from "antd";
 
 const Products = () => {
-  const [isDrawerVisible, setIsDrawerVisible] = useState(false);
+  const [searchText, setSearchText] = useState("");
+  const [filteredData, setFilteredData] = useState([]);
+  const columns = [
+    {
+      title: "Name",
+      dataIndex: "name",
+      sorter: (a, b) => a.name.localeCompare(b.name),
+    },
+    {
+      title: "Age",
+      dataIndex: "age",
+      sorter: (a, b) => a.age - b.age,
+    },
+    {
+      title: "Address",
+      dataIndex: "address",
+      sorter: (a, b) => a.address.localeCompare(b.address),
+    },
+  ];
+  const data = [
+    {
+      key: "1",
+      name: "John Brown",
+      age: 32,
+      address: "New York No. 1 Lake Park",
+    },
+    {
+      key: "2",
+      name: "Jim Green",
+      age: 42,
+      address: "London No. 1 Lake Park",
+    },
+  ];
 
-  const showDrawer = () => {
-    setIsDrawerVisible(true);
+  const onChange = (pagination, filters, sorter, extra) => {
+    console.log("params", pagination, filters, sorter, extra);
   };
 
-  const closeDrawer = () => {
-    setIsDrawerVisible(false);
+  const handleInputChange = (e) => {
+    const searchText = e.target.value.toLowerCase();
+    setSearchText(searchText);
+
+    const filtered = data.filter((record) =>
+      Object.values(record).some((value) =>
+        value.toString().toLowerCase().includes(searchText)
+      )
+    );
+    setFilteredData(filtered);
   };
 
   return (
-    <>
-      <h1>All products</h1>
-      <Button onClick={showDrawer}>Crear</Button>
-
-      <Drawer
-        title="Crear Producto"
-        width={"100%"}
-        height={"100%"}
-        placement={"top"}
-        autoFocus
-        onClose={closeDrawer}
-        open={isDrawerVisible}
-        bodyStyle={{ paddingBottom: 80 }}
-        footer={
-          <div
-            style={{
-              textAlign: "top",
-            }}
-          ></div>
+    <div>
+      <Input
+        className="my-4"
+        placeholder="Buscar Producto"
+        value={searchText}
+        onChange={handleInputChange}
+        allowClear
+      />
+      <Table
+        columns={columns}
+        dataSource={
+          filteredData.length
+            ? filteredData
+            : [{ key: "nodata", noData: "No data" }]
         }
-      >
-        <CreateOrEditProduct onCancel={closeDrawer} />
-      </Drawer>
-    </>
+        onChange={onChange}
+        locale={{
+          emptyText: "No data",
+        }}
+      />
+    </div>
   );
 };
 

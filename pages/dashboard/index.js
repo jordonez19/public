@@ -1,7 +1,6 @@
 import React from "react";
 import { ConfigProvider, Button } from "antd";
 import esES from "antd/lib/locale/es_ES";
-import "./App.css";
 
 const theme = {
   primaryColor: "#7B6ADA",

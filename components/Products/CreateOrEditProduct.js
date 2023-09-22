@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import React, { useState } from "react";
 import { Form, Input, Button, Checkbox, message, Upload, Select } from "antd";
 import { LoadingOutlined, PlusOutlined } from "@ant-design/icons";
