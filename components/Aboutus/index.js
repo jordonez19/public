@@ -19,7 +19,7 @@ const Aboutus = () => {
                       aria-expanded="true"
                       aria-controls="collapseOne"
                     >
-                      Where shall we begin?
+                      <span>01</span> ¿Quiénes somos?
                     </button>
                   </h2>
                   <div
@@ -29,69 +29,72 @@ const Aboutus = () => {
                     data-bs-parent="#accordionExample"
                   >
                     <div className="accordion-body">
-                      Dolor <strong>almesit amet</strong>, consectetur
-                      adipiscing elit, sed doesnt eiusmod tempor incididunt ut
-                      labore consectetur <code>adipiscing</code> elit, sed do
-                      eiusmod tempor incididunt ut labore et dolore magna
-                      aliqua. Quis ipsum suspendisse ultrices gravida.
+                      Nuestra herramienta tecnológica ha sido desarrollada
+                      pensando en la simplicidad y facilidad de uso. No importa
+                      cuál sea tu nivel de experiencia en tecnología, Integrah
+                      te guiará de manera intuitiva a través de cada paso,
+                      facilitando el proceso de gestión de tus operaciones.
                     </div>
                   </div>
                 </div>
                 <div className="accordion-item">
-                  <h2 className="accordion-header" id="headingTwo">
+                  <h2 className="accordion-header" id="headingOne">
                     <button
-                      className="accordion-button collapsed"
+                      className="accordion-button"
                       type="button"
                       data-bs-toggle="collapse"
-                      data-bs-target="#collapseTwo"
-                      aria-expanded="false"
-                      aria-controls="collapseTwo"
+                      data-bs-target="#collapseOne"
+                      aria-expanded="true"
+                      aria-controls="collapseOne"
                     >
-                      How do we work together?
+                      ¿Por qué elegirnos?
                     </button>
                   </h2>
                   <div
-                    id="collapseTwo"
-                    className="accordion-collapse collapse"
-                    aria-labelledby="headingTwo"
+                    id="collapseOne"
+                    className="accordion-collapse collapse show"
+                    aria-labelledby="headingOne"
                     data-bs-parent="#accordionExample"
                   >
                     <div className="accordion-body">
-                      Dolor <strong>almesit amet</strong>, consectetur
-                      adipiscing elit, sed doesnt eiusmod tempor incididunt ut
-                      labore consectetur <code>adipiscing</code> elit, sed do
-                      eiusmod tempor incididunt ut labore et dolore magna
-                      aliqua. Quis ipsum suspendisse ultrices gravida.
+                      Ya sea que dirijas una pequeña empresa en crecimiento o
+                      una corporación a gran escala, Integrah se adapta a tus
+                      necesidades. Nuestra plataforma es escalable y
+                      personalizable, lo que significa que podrás ajustarla y
+                      adaptarla a medida que tu negocio evolucione.
                     </div>
                   </div>
                 </div>
                 <div className="accordion-item">
-                  <h2 className="accordion-header" id="headingThree">
+                  <h2 className="accordion-header" id="headingOne">
                     <button
-                      className="accordion-button collapsed"
+                      className="accordion-button"
                       type="button"
                       data-bs-toggle="collapse"
-                      data-bs-target="#collapseThree"
-                      aria-expanded="false"
-                      aria-controls="collapseThree"
+                      data-bs-target="#collapseOne"
+                      aria-expanded="true"
+                      aria-controls="collapseOne"
                     >
-                      Why SCHOLAR is the best?
+                      Conclucion de la empresa
                     </button>
                   </h2>
                   <div
-                    id="collapseThree"
-                    className="accordion-collapse collapse"
-                    aria-labelledby="headingThree"
+                    id="collapseOne"
+                    className="accordion-collapse collapse show"
+                    aria-labelledby="headingOne"
                     data-bs-parent="#accordionExample"
                   >
                     <div className="accordion-body">
-                      There are more than one hundred responsive HTML templates
-                      to choose from <strong>Template</strong>Mo website. You
-                      can browse by different tags or categories.
+                      En Integrah, creemos en el poder de la tecnología para
+                      transformar la forma en que operan las empresas. Nuestro
+                      objetivo es proporcionarte una herramienta integral que
+                      simplifique tus operaciones y te permita enfocarte en lo
+                      que realmente importa: hacer crecer tu negocio.
                     </div>
                   </div>
                 </div>
-                <div className="accordion-item">
+
+                {/* <div className="accordion-item">
                   <h2 className="accordion-header" id="headingFour">
                     <button
                       className="accordion-button collapsed"
@@ -101,7 +104,7 @@ const Aboutus = () => {
                       aria-expanded="false"
                       aria-controls="collapseFour"
                     >
-                      Do we get the best support?
+                      Conclucion de la empresa
                     </button>
                   </h2>
                   <div
@@ -111,29 +114,33 @@ const Aboutus = () => {
                     data-bs-parent="#accordionExample"
                   >
                     <div className="accordion-body">
-                      You can also search on Google with specific keywords such
-                      as{" "}
-                      <code>
-                        templatemo business templates, templatemo gallery
-                        templates, admin dashboard templatemo, 3-column
-                        templatemo, etc.
-                      </code>
+                      En Integrah, creemos en el poder de la tecnología para
+                      transformar la forma en que operan las empresas. Nuestro
+                      objetivo es proporcionarte una herramienta integral que
+                      simplifique tus operaciones y te permita enfocarte en lo
+                      que realmente importa: hacer crecer tu negocio.
                     </div>
                   </div>
-                </div>
+                </div> */}
+
               </div>
             </div>
             <div className="col-lg-5 align-self-center">
               <div className="section-heading">
-                <h6>About Us</h6>
-                <h2>What make us the best academy online?</h2>
+                <h6>Somos</h6>
+                <h2>¿Por qué somos la mejor opción?</h2>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Quis ipsum suspendisse ultrices gravid risus commodo.
+                  Integrah es una herramienta tecnológica que simplifica la
+                  gestión de operaciones al sincronizar múltiples módulos
+                  funcionales en una plataforma intuitiva. Con Integrah, puedes
+                  administrar tu información de manera efectiva y sin
+                  complicaciones, optimizando cada aspecto de tu negocio.
+                  Nuestra solución integral te brinda una visión global de tu
+                  empresa y permite tomar decisiones basadas en tus datos a
+                  tiempo real.
                 </p>
                 <div className="main-button">
-                  <Link href="#">Discover More</Link>
+                  <Link href="#">Descubre Mas</Link>
                 </div>
               </div>
             </div>

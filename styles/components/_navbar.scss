@@ -1,10 +1,17 @@
 @use "../global/variables" as v;
 
-.logo-img {
-  width: 36px;
-  margin: -3px 0;
-  position: absolute;
-  z-index: 9;
+
+.logo_container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  .logo-img {
+    width: 80px;
+    margin: -3px 0;
+    position: relative;
+    z-index: 9;
+  }
 }
 .header {
   background: v.$primary-color;
@@ -36,7 +43,7 @@
       font-weight: bold;
       text-decoration: none;
       color: v.$light;
-      padding-left: 42px;
+      padding-left: 5px;
       @include v.breakpoint(mdx) {
         display: none;
       }

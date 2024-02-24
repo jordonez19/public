@@ -21,7 +21,7 @@ const Testimonials = () => {
                     <h4>Claude David</h4>
                   </div>
                 </div>
-                <div className="item">
+               {/*  <div className="item">
                   <p>
                     “Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                     sed do eiusmod tempor incididunt ut labore et dolore magna
@@ -44,7 +44,7 @@ const Testimonials = () => {
                     <span className="category">Digital Animator</span>
                     <h4>Stella Blair</h4>
                   </div>
-                </div>
+                </div> */}
               </div>
             </div>
             <div className="col-lg-5 align-self-center">

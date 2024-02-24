@@ -25,8 +25,8 @@
 }
 
 .main-banner .item span.category {
-  background-color: #7a6ad8;
-  color: #fff;
+  background-color: v.$primary-color;
+  color: v.$white;
   font-size: 14px;
   text-transform: uppercase;
   padding: 5px 15px;
@@ -37,12 +37,12 @@
 .main-banner .item h2 {
   font-size: 48px;
   font-weight: 700;
-  color: #fff;
+  color: v.$white;
   line-height: 70px;
 }
 
 .main-banner .item p {
-  color: #fff;
+  color: v.$white;
 }
 
 .main-banner .item .buttons {
@@ -51,8 +51,8 @@
 
 .main-banner .item .buttons .main-button a {
   font-size: 14px;
-  color: #7a6ad8;
-  background-color: #fff;
+  color: v.$primary-color;
+  background-color: v.$white;
   display: inline-block;
   height: 50px;
   line-height: 50px;
@@ -62,8 +62,8 @@
 }
 
 .main-banner .item .buttons .icon-button i {
-  color: #7a6ad8;
-  background-color: #fff;
+  color: v.$primary-color;
+  background-color: v.$white;
   display: inline-block;
   height: 50px;
   width: 50px;
@@ -74,7 +74,7 @@
 }
 
 .main-banner .item .buttons .icon-button a {
-  color: #fff;
+  color: v.$white;
   font-size: 14px;
   font-weight: 500;
 }
@@ -94,7 +94,7 @@
   line-height: 50px;
   font-size: 24px;
   display: inline-block;
-  color: #fff;
+  color: v.$white;
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 50%;
   opacity: 1;
@@ -115,7 +115,7 @@
   height: 50px;
   line-height: 50px;
   font-size: 24px;
-  color: #fff;
+  color: v.$white;
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 50%;
   opacity: 1;

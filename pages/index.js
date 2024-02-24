@@ -27,14 +27,9 @@ export default function Home() {
       </Head>
 
       <MainLayout>
+        {/* <S3Input />  */}
+        
         <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <S3Input /> 
-        {/* <br />
 
         <Banner />
         <Services />
@@ -45,7 +40,6 @@ export default function Home() {
         <Testimonials />
         <Events />
         <Contactus />
-      */}
       </MainLayout>
     </>
   );

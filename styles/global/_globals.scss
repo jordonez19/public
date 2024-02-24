@@ -8,13 +8,13 @@
 }
 
 ::selection {
-  background: #7a6ad8;
-  color: #fff;
+  background: v.$primary-color;
+  color: v.$white;
 }
 
 ::-moz-selection {
-  background: #7a6ad8;
-  color: #fff;
+  background: v.$primary-color;
+  color: v.$white;
 }
 
 .section {
@@ -35,12 +35,12 @@
 }
 
 .section-heading h2 em {
-  color: #7a6ad8;
+  color: v.$primary-color;
   font-style: normal;
 }
 
 .section-heading h6 {
-  color: #7a6ad8;
+  color: v.$primary-color;
   font-size: 14px;
   text-transform: uppercase;
   font-weight: 600;
@@ -48,8 +48,8 @@
 
 .main-button a {
   display: inline-block;
-  background-color: #fff;
-  color: #7a6ad8;
+  background-color: v.$white;
+  color: v.$primary-color;
   font-size: 14px;
   font-weight: 500;
   height: 40px;
@@ -60,8 +60,8 @@
 }
 
 .main-button a:hover {
-  background-color: #7a6ad8;
-  color: #fff;
+  background-color: v.$primary-color;
+  color: v.$white;
 }
 
 .cursor-pointer{

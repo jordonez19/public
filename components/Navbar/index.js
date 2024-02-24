@@ -60,16 +60,18 @@ const Navbar = () => {
   }, []);
   return (
     <>
-      <header className={`header  ${isFixed ? "fixed-navbar" : ""}`}>
+      <header className={` header  ${isFixed ? "fixed-navbar" : ""}`}>
         <div className={"header__content"}>
-          <img
-            className={`logo-img ${isFixed ? "fixed" : ""}`}
-            src="Novakademia2.png"
-            alt="logo-img"
-          />
-          <Link href="/" className={`header__content__logo`}>
-            {menuOpen ? '' : 'Novakademia'}
-          </Link>
+          <div className="logo_container">
+            <img
+              className={`logo-img ${isFixed ? "fixed" : ""}`}
+              src="logo3.png"
+              alt="logo-img"
+            />
+            <Link href="/" className={`header__content__logo`}>
+              {menuOpen ? "" : "logic"}
+            </Link>
+          </div>
           <nav className={`header__content__nav ${menuOpen ? "isMenu" : ""}`}>
             <ul>
               <li>
