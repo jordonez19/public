@@ -36,7 +36,7 @@ export default function Home() {
         <Aboutus />
         <Courses />
         <Team />
-        <Funfacts />
+        {/* <Funfacts /> */}
         <Testimonials />
         <Events />
         <Contactus />
