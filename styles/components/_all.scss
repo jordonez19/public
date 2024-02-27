@@ -312,12 +312,13 @@ Team Style
 }
 
 .team-member img {
-  max-width: 220px;
+  min-width: 200px;
+  max-width: 250px;
   border-radius: 50%;
   position: absolute;
-  top: -110px;
+  top: -100px;
   left: 50%;
-  transform: translateX(-110px);
+  transform: translateX(-120px);
   transition: all 0.3s;
 }
 

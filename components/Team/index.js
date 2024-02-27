@@ -19,7 +19,7 @@ const Team = () => {
             <div className="col-lg-4 col-md-6">
               <div className="team-member">
                 <div className="main-content">
-                  <img src="assets/images/member-01.jpg" alt="" />
+                  <img src="assets/images/member-03.jpg" alt="" />
                   <span className="category">Guia profesional</span>
                   <h4>Gonzalo Tolosa</h4>
                 </div>

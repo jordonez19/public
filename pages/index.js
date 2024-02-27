@@ -1,21 +1,13 @@
 /* eslint-disable @next/next/no-img-element */
 import Aboutus from "@/components/Aboutus";
 import Banner from "@/components/Banner";
-import Contactanos from "@/components/Contact";
 import Contactus from "@/components/Contactus";
 import Courses from "@/components/Courses";
-import Events from "@/components/Events";
-import Footer from "@/components/Footer";
-import Funfacts from "@/components/Funfacts";
-import S3Input from "@/components/ImageBase64/s3";
-import Preloader from "@/components/Loader";
-import Navbar from "@/components/Navbar";
 import Services from "@/components/Services";
 import Team from "@/components/Team";
 import Testimonials from "@/components/Testimonials";
 import MainLayout from "@/layout/MainLayout";
 import Head from "next/head";
-import Link from "next/link";
 
 export default function Home() {
   return (
