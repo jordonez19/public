@@ -1,20 +1,19 @@
 @use "../global/variables" as v;
 
-
-.logo_container{
+.logo_container {
   display: flex;
   align-items: center;
   justify-content: center;
-  
+
   .logo-img {
-    width: 80px;
+    width: 180px;
     margin: -3px 0;
     position: relative;
     z-index: 9;
   }
 }
 .header {
-  background: v.$primary-color;
+  background: v.$white;
   width: 100%;
   height: v.$headerHeight;
   padding: 0 1.5rem;
@@ -22,6 +21,8 @@
   transition: all 0.3s ease;
   position: absolute;
   top: 0;
+  z-index: 99999;
+  box-shadow: v.$boxshadow;
 
   @include v.breakpoint(md-custom) {
     padding: 0 3rem;
@@ -29,7 +30,7 @@
 
   &__content {
     overflow: hidden;
-    color: v.$light;
+    color: v.$primary-color;
     margin: 0 auto;
     max-width: 1920px;
     height: 100%;

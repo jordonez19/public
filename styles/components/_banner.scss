@@ -1,8 +1,7 @@
 @use "../global/variables" as v;
 
 .main-banner {
-  background-image: url("/assets/images/banner-bg.jpg");
-
+  background-image: url("/banner-bg.png");
   background-position: right bottom;
   background-repeat: no-repeat;
   background-size: cover;
@@ -25,7 +24,7 @@
 }
 
 .main-banner .item span.category {
-  background-color: v.$primary-color;
+  background-color: v.$third-color;
   color: v.$white;
   font-size: 14px;
   text-transform: uppercase;
@@ -95,10 +94,10 @@
   font-size: 24px;
   display: inline-block;
   color: v.$white;
-  background-color: rgba(255, 255, 255, 0.2);
   border-radius: 50%;
   opacity: 1;
   transition: all 0.3s;
+  background-color: v.$primary-color;
 }
 
 .buttons__banner-container {
@@ -121,7 +120,10 @@
   opacity: 1;
   transition: all 0.3s;
   border: none;
+  background-color: v.$third-color;
+  opacity: 0.8;
 }
 .btn-banner:hover {
-  background-color: rgba(255, 255, 255, 0.479);
+  opacity: 1;
+  transform: scale(1.1);
 }

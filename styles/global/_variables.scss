@@ -1,24 +1,24 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
 //colors
-$primary-color: #7B00E9;
-$secondary-color: #b199d9;
-$accent-color: #3B647C;
-$success-color: #8EB031;
-$warning-color: #F7C359;
+$primary-color: #8bc53f;
+$secondary-color: #c9fa89;
+$third-color: #9d022a;
+$accent-color: #3b647c;
+$success-color: #8eb031;
+$warning-color: #f7c359;
 $hover-color: #7b6ee0;
 $card-bg: #f4f4ff;
 
 //fonts
 $font-family: "Poppins", sans-serif;
-$font-primary:#4a4a4a;
+$font-primary: #4a4a4a;
 
 //shadows
-$boxshadow: 0 0 5px gray;
+$boxshadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
 
 //backgrounds
 $background-linear: linear-gradient(45deg, #cfcef3, #8479d8);
 $background-linear2: linear-gradient(90deg, #5d54a4, #7c78b8);
-
 
 //whatsapp
 $green: #25d366;
@@ -57,7 +57,7 @@ $headerHeight: 80px;
       @content;
     }
   }
-   @if $point == md-custom {
+  @if $point == md-custom {
     @media (min-width: 1300px) {
       @content;
     }
@@ -68,5 +68,3 @@ $headerHeight: 80px;
     }
   }
 }
-
-

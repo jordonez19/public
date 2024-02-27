@@ -15,7 +15,7 @@
   display: inline-block;
   text-align: center;
   line-height: 190px;
-  background-color: v.$primary-color;
+  background-color: v.$third-color;
   border-radius: 50%;
   position: absolute;
   right: 0;
@@ -47,4 +47,8 @@
 .services .service-item p {
   color: v.$font-primary;
   margin-bottom: 25px;
+}
+
+.logo_preset {
+  width: 50%;
 }

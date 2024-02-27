@@ -1,12 +1,10 @@
 @use "../global/variables" as v;
 
-
 /* 
 ---------------------------------------------
 Services Style
 --------------------------------------------- 
 */
-
 
 /* 
 ---------------------------------------------
@@ -53,11 +51,13 @@ About Style
   outline: none;
   box-shadow: none;
   border-radius: 40px !important;
+  background-color: v.$white !important;
 }
 
 .accordion-button:not(.collapsed) {
   color: v.$primary-color;
   background-color: v.$white;
+  background-color: v.$white !important;
 }
 
 h2.accordion-header button {
@@ -78,7 +78,7 @@ h2.accordion-header button {
   text-align: center;
   line-height: 30px;
   border-radius: 50%;
-  background-color: v.$primary-color;
+  background-color: v.$white;
   color: v.$white;
 }
 
@@ -152,6 +152,7 @@ Courses Style
 
 .events_item .thumb img {
   margin-bottom: -5px;
+  height: 250px;
 }
 
 .events_item .thumb span.category {
@@ -172,7 +173,7 @@ Courses Style
   position: absolute;
   right: -30px;
   top: -50px;
-  background-color: rgba(122, 106, 216, 0.95);
+  background-color: v.$third-color;
   width: 130px;
   height: 130px;
   border-radius: 50%;
@@ -756,12 +757,8 @@ Contact Style
 
 .contact-us-content .more-info {
   text-align: center;
-  background: rgb(85, 0, 227);
-  background: linear-gradient(
-    90deg,
-    rgba(85, 0, 227, 1) 0%,
-    rgba(198, 61, 255, 1) 100%
-  );
+  background: #dc2b57;
+  background: linear-gradient(90deg, #ff1f57 0%, #9d022a 100%);
   border-radius: 0px 0px 23px 23px;
   padding: 45px 30px 15px 30px;
 }

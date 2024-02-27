@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
 import React from "react";
 
 const Testimonials = () => {
@@ -11,17 +10,14 @@ const Testimonials = () => {
               <div className="owl-carousel owl-testimonials">
                 <div className="item">
                   <p>
-                    “Please tell your friends or collegues about TemplateMo
-                    website. Anyone can access the website to download free
-                    templates. Thank you for visiting.”
-                  </p>
+                    Viajar es mucho más que visitar lugares nuevos; es sumergirse en culturas diferentes, explorar paisajes desconocidos y descubrir la belleza del mundo que nos rodea. Cada experiencia turística enriquece nuestra vida y nos brinda recuerdos inolvidables que perduran para siempre en nuestro corazón y en nuestra mente.                  </p>
                   <div className="author">
-                    <img src="assets/images/testimonial-author.jpg" alt="" />
-                    <span className="category">Full Stack Master</span>
-                    <h4>Claude David</h4>
+                    <img src="man.png" alt="" />
+                    <span className="category">Mauricio Gonzalez Castro</span>
+                    <h4>Melgar</h4>
                   </div>
                 </div>
-               {/*  <div className="item">
+                {/*  <div className="item">
                   <p>
                     “Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                     sed do eiusmod tempor incididunt ut labore et dolore magna
@@ -49,19 +45,16 @@ const Testimonials = () => {
             </div>
             <div className="col-lg-5 align-self-center">
               <div className="section-heading">
-                <h6>TESTIMONIALS</h6>
-                <h2>What they say about us?</h2>
+                <h6>TESTIMONIOS</h6>
+                <h2>¿Qué dicen de nosotros?</h2>
                 <p>
-                  You can search free CSS templates on Google using different
-                  keywords such as templatemo portfolio, templatemo gallery,
-                  templatemo blue color, etc.
+                  Que bueno es recordar momentos y oportunidades de conexión y aprendizaje.. Tolima Adventure Más que una Experiencia.
                 </p>
               </div>
             </div>
           </div>
         </div>
       </div>
-      ;
     </>
   );
 };

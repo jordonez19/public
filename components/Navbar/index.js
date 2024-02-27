@@ -60,64 +60,58 @@ const Navbar = () => {
   }, []);
   return (
     <>
-      <header className={` header  ${isFixed ? "fixed-navbar" : ""}`}>
+      <header className={` slideInDown header  ${isFixed ? "fixed-navbar" : ""}`}>
         <div className={"header__content"}>
           <div className="logo_container">
             <img
               className={`logo-img ${isFixed ? "fixed" : ""}`}
-              src="logo3.png"
+              src="logoHred.png"
               alt="logo-img"
             />
             <Link href="/" className={`header__content__logo`}>
-              {menuOpen ? "" : "logic"}
+              {menuOpen ? "" : ""}
             </Link>
           </div>
           <nav className={`header__content__nav ${menuOpen ? "isMenu" : ""}`}>
             <ul>
               <li>
-                <Link href="/" onClick={menuToggleHandler}>
+                <Link href="#top" onClick={menuToggleHandler}>
                   Inicio
                 </Link>
               </li>
               <li>
-                <Link href="/servicios" onClick={menuToggleHandler}>
+                <Link href="#services" onClick={menuToggleHandler}>
                   Servicios
                 </Link>
               </li>
               <li>
-                <Link href="/acerca-de" onClick={menuToggleHandler}>
+                <Link href="#aboutus" onClick={menuToggleHandler}>
                   nosotros
                 </Link>
               </li>
               <li>
-                <Link href="/cursos" onClick={menuToggleHandler}>
-                  Cursos
+                <Link href="#courses" onClick={menuToggleHandler}>
+                  Productos
                 </Link>
               </li>
               <li>
-                <Link href="/eventos" onClick={menuToggleHandler}>
+                <Link href="#events" onClick={menuToggleHandler}>
                   Eventos
                 </Link>
               </li>
               <li>
-                <Link href="/contacto" onClick={menuToggleHandler}>
+                <Link href="#contact" onClick={menuToggleHandler}>
                   Contáctenos
                 </Link>
               </li>
             </ul>
-            <Link href="/login">
+            <Link href="">
               <button className="me-2">Ingresar</button>
             </Link>
-            <ul className="text-center">
-              <li className="text-center">
-                <ShoppingCart itemCount={9} />
-              </li>
-            </ul>
           </nav>
           <div
-            className={`header__content__toggle ${
-              isFixed ? "fixed__toogle" : ""
-            }`}
+            className={`header__content__toggle ${isFixed ? "fixed__toogle" : ""
+              }`}
           >
             {!menuOpen ? (
               <MenuOutlined onClick={menuToggleHandler} />
