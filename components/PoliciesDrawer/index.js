@@ -19,7 +19,7 @@ const PoliciesDrawer = ({ onClose, open }) => {
           </Space>
         }
       >
-        <div style={{ flex: 1, overflowY: "auto" }}>
+        <div style={{ flex: 1, overflowY: "auto" }} className="content container">
           <p>
             <h2>POLÍTICA DE SOSTENIBILIDAD:</h2>
             Para Tolima adventure es muy importante que nuestras acciones hoy

@@ -1,14 +1,17 @@
 import React, { useState } from "react";
-import { Button, Input, Form, message } from "antd";
+import { Button, Input, Form, message, Select } from "antd";
 import { SendOutlined } from "@ant-design/icons";
-import { post } from "../api";
+import axios from "axios"; // Importar Axios
 const { TextArea } = Input;
+const { Option } = Select;
 
 const initValues = {
   name: "",
   email: "",
+  phone: "",
   subject: "",
   message: "",
+  product: "", // Nuevo campo para el producto
 };
 const initState = { values: initValues };
 
@@ -16,14 +19,6 @@ const Contactanos = () => {
   const [state, setState] = useState(initState);
   const [touched, setTouched] = useState({});
   const { values, isLoading, error } = state;
-
-    const handlePost = async (data) => {
-    try {
-      await post("mailto", data);
-    } catch (error) {
-      console.error(error)
-    }
-  };
 
   const success = () => {
     message.success("¡Se ha enviado el mensaje exitosamente!");
@@ -64,7 +59,15 @@ const Contactanos = () => {
         return;
       }
 
-      await handlePost(values);
+      await axios.post("https://formsubmit.co/ajax/comercial@tolimaadventure.com", {
+        name: values.name,
+        email: values.email,
+        phone: values.phone,
+        subject: values.subject,
+        message: values.message,
+        product: values.product,
+      });
+
       setTouched({});
       setState(initState);
       success();
@@ -115,7 +118,7 @@ const Contactanos = () => {
             label="Correo"
             validateStatus={
               touched.email &&
-              (!values.email || !/\S+@\S+\.\S+$/.test(values.email))
+                (!values.email || !/\S+@\S+\.\S+$/.test(values.email))
                 ? "error"
                 : ""
             }
@@ -123,14 +126,28 @@ const Contactanos = () => {
               touched.email && !values.email
                 ? "El Correo es requerido."
                 : touched.email && !/\S+@\S+\.\S+$/.test(values.email)
-                ? "El Correo es inválido."
-                : ""
+                  ? "El Correo es inválido."
+                  : ""
             }
           >
             <Input
               type="email"
               name="email"
               value={values.email}
+              onChange={handleChange}
+              onBlur={onBlur}
+            />
+          </Form.Item>
+
+          <Form.Item
+            label="Teléfono"
+            validateStatus={touched.phone && !values.phone ? "error" : ""}
+            help={touched.phone && !values.phone ? "El Teléfono es requerido." : ""}
+          >
+            <Input
+              type="text"
+              name="phone"
+              value={values.phone}
               onChange={handleChange}
               onBlur={onBlur}
             />
@@ -152,6 +169,24 @@ const Contactanos = () => {
               onChange={handleChange}
               onBlur={onBlur}
             />
+          </Form.Item>
+
+          <Form.Item
+            label="Producto"
+            validateStatus={touched.product && !values.product ? "error" : ""}
+            help={touched.product && !values.product ? "Seleccione un Producto." : ""}
+          >
+            <Select
+              placeholder="Seleccione un producto"
+              name="product"
+              value={values.product}
+              onChange={(value) => handleChange({ target: { name: 'product', value } })}
+              onBlur={() => onBlur({ target: { name: 'product' } })}
+            >
+              <Option value="producto1">Producto 1</Option>
+              <Option value="producto2">Producto 2</Option>
+              <Option value="producto3">Producto 3</Option>
+            </Select>
           </Form.Item>
 
           <Form.Item

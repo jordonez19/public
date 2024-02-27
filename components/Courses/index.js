@@ -17,35 +17,35 @@ const Courses = () => {
     {
       imagen: "cuevaeden/cave.jpeg",
       categoria: "design",
-      precio: "160",
+      precio: "",
       autor: "Un viaje a la Colombia subterránea",
       titulo: "La cueva del Edén"
     },
     {
       imagen: "citytour/melgar.jpg",
       categoria: "development",
-      precio: "340",
+      precio: "",
       autor: "Una historia entre cordilleras y agua",
       titulo: "City Tour Melgar"
     },
     {
       imagen: "icononzo/1.jpg",
       categoria: "design wordpress",
-      precio: "640",
+      precio: "",
       autor: "Balcón del Tolima",
       titulo: "Icononzo"
     },
     {
       imagen: "bananitobaby/2.png",
       categoria: "development",
-      precio: "450",
+      precio: "",
       autor: "Con sabor a cordillera",
       titulo: "Bananito baby"
     },
     {
       imagen: "cascadas/1.jpg",
       categoria: "wordpress development",
-      precio: "320",
+      precio: "",
       autor: "Cascada Las Golondrinas",
       titulo: "Canyoning"
     }
@@ -199,11 +199,11 @@ const Courses = () => {
                 <div className="events_item">
                   <div className="thumb">
                     <img style={{ width: '100%' }} src={eventos[index].imagen} alt="" />
-                    <span className="price">
+                    {/* <span className="price">
                       <h6>
                         <em>$</em>{eventos[index].precio}
                       </h6>
-                    </span>
+                    </span> */}
                   </div>
                   <div className="down-content">
                     <span className="author">{eventos[index].autor}</span>

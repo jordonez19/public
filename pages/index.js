@@ -29,11 +29,9 @@ export default function Home() {
 
       <MainLayout>
         <Banner />
-
+        <Courses />
         <Services />
         <Aboutus />
-
-        <Courses />
         <Team />
         <Testimonials />
         {/* <Events /> */}

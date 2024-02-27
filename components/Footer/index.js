@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { Modal, Button } from "antd";
 import Link from "next/link";
 import PoliciesDrawer from "../PoliciesDrawer";
+import ServicesDrawer from "../ServicesDrawer";
+import PrivacyDrawer from "../PrivacyDrawer";
 
 const Footer = () => {
   const [conditionsModalVisible, setConditionsModalVisible] = useState(false);
@@ -14,22 +16,39 @@ const Footer = () => {
     setConditionsModalVisible(false);
   };
 
+  const [servicesModalVisible, setServicesModalVisible] = useState(false);
+
+  const showservicesModal = () => {
+    setServicesModalVisible(true);
+  };
+
+  const handleservicesModalCancel = () => {
+    setServicesModalVisible(false);
+  };
+
+
+  const [privacidadModalVisible, setPrivacidadModalVisible] = useState(false);
+
+  const showprivacidadModal = () => {
+    setPrivacidadModalVisible(true);
+  };
+
+  const handleprivacidadModalCancel = () => {
+    setPrivacidadModalVisible(false);
+  };
   return (
     <>
       <footer>
         <div className="container">
           <div className="col-lg-12">
             <p>
-              Copyright © 2023 todos los derechos reservados. &nbsp;&nbsp;&nbsp;
-              <Link
-                href="https://tolimaadventure.com"
-                rel="nofollow"
-                target="_blank"
-              >
-                Tolima Adventure
-              </Link>
+              Copyright © 2023 todos los derechos reservados. &nbsp;&nbsp;&nbsp; <b>Tolima Adventure</b>
             </p>
-            <p style={{ textDecoration: 'underline', cursor: 'pointer' }} onClick={showConditionsModal}>Servicios y Condiciones</p>
+            <div className="d-flex justify-content-center">
+              <p className="" style={{ textDecoration: 'underline', cursor: 'pointer' }} onClick={showConditionsModal}>Politica de sostenibilidad </p>
+              <p className="mx-2" style={{ textDecoration: 'underline', cursor: 'pointer' }} onClick={showprivacidadModal}>Politica de privacidad </p>
+              <p style={{ textDecoration: 'underline', cursor: 'pointer' }} onClick={showservicesModal}>Politica de Servicios</p>
+            </div>
           </div>
         </div>
       </footer>
@@ -37,6 +56,16 @@ const Footer = () => {
       <PoliciesDrawer
         onClose={handleConditionsModalCancel}
         open={conditionsModalVisible}
+      />
+
+      <ServicesDrawer
+        onClose={handleservicesModalCancel}
+        open={servicesModalVisible}
+      />
+
+      <PrivacyDrawer
+        onClose={handleprivacidadModalCancel}
+        open={privacidadModalVisible}
       />
 
     </>

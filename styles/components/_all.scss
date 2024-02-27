@@ -620,6 +620,14 @@ Contact Style
   text-transform: uppercase;
   text-align: left;
 }
+.check_terms {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  width: 35px !important;
+  height: 35px !important;
+  margin: 0 10px;
+}
 
 .contact-us .special-offer span.offer em {
   font-size: 28px;
@@ -735,6 +743,35 @@ Contact Style
 
 #contact-form textarea::placeholder {
   color: v.$white;
+}
+
+#contact-form select {
+  width: 100%;
+  height: auto;
+  border-radius: 25px;
+  background-color: v.$primary-color;
+  background-color: rgba(249, 235, 255, 0.15);
+  border: none;
+  outline: none;
+  font-weight: 300;
+  padding: 20px;
+  font-size: 14px;
+  color: v.$white;
+  margin-bottom: 30px;
+  position: relative;
+  z-index: 3;
+}
+
+#contact-form select option {
+  background-color: v.$primary-color;
+  color: v.$white;
+}
+#contact-form select option:hover {
+  background-color: v.$white;
+  color: v.$primary-color;
+}
+#contact-form select::-ms-expand {
+  display: none;
 }
 
 #contact-form button {
