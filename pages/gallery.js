@@ -1,10 +1,10 @@
 import React from "react";
-import LoginContainer from "@/containers/Login";
+import CarouselComponent from "@/components/Carousel";
 
 const Login = () => {
   return (
     <>
-      <LoginContainer />
+      <CarouselComponent />
     </>
   );
 };
