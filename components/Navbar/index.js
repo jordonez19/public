@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
 import React, { useEffect, useState } from "react";
 import {
   MenuOutlined,
@@ -52,61 +51,60 @@ const Navbar = () => {
     setMenuOpen((p) => !p);
   };
 
-  const ctaClickHandler = () => {
-    menuToggleHandler();
+  const handleLinkClick = () => {
+    setMenuOpen(false); // Cierra el menú al hacer clic en un enlace
   };
-  useEffect(() => {
-    setMenuOpen(false);
-  }, []);
+
   return (
     <>
-      <header className={` slideInDown header  ${isFixed ? "fixed-navbar" : ""}`}>
-        <div className={"header__content"}>
+      <header className={`slideInDown header ${isFixed ? "fixed-navbar" : ""}`}>
+        <div className="header__content">
           <div className="logo_container">
-            <img
-              className={`logo-img ${isFixed ? "fixed" : ""}`}
-              src="logoHred.png"
-              alt="logo-img"
-            />
-            <Link href="/" className={`header__content__logo`}>
-              {menuOpen ? "" : ""}
+            <Link href="/">
+              <img
+                className={`logo-img ${isFixed ? "fixed" : ""}`}
+                src="logoHred.png"
+                alt="logo-img"
+              />
             </Link>
           </div>
           <nav className={`header__content__nav ${menuOpen ? "isMenu" : ""}`}>
             <ul>
               <li>
-                <Link href="#top" onClick={menuToggleHandler}>
+                <Link href="#top" onClick={handleLinkClick}>
                   Inicio
                 </Link>
               </li>
               <li>
-                <Link href="#services" onClick={menuToggleHandler}>
+                <Link href="#services" onClick={handleLinkClick}>
                   Servicios
                 </Link>
               </li>
               <li>
-                <Link href="#aboutus" onClick={menuToggleHandler}>
-                  nosotros
+                <Link href="#aboutus" onClick={handleLinkClick}>
+                  Nosotros
                 </Link>
               </li>
               <li>
-                <Link href="#courses" onClick={menuToggleHandler}>
+                <Link href="#courses" onClick={handleLinkClick}>
                   Productos
                 </Link>
               </li>
-              <li>
-                <Link href="#events" onClick={menuToggleHandler}>
+              {/*  <li>
+                <Link href="#events" onClick={handleLinkClick}>
                   Eventos
                 </Link>
-              </li>
-              <li>
-                <Link href="#contact" onClick={menuToggleHandler}>
+              </li> */}
+              {/*  <li>
+                <Link href="#contact" onClick={handleLinkClick}>
                   Contáctenos
                 </Link>
-              </li>
+              </li> */}
             </ul>
-            <Link href="">
-              <button className="me-2">Ingresar</button>
+            <Link
+              href={`#contact`}
+            >
+              <button className="me-2">Contactar</button>
             </Link>
           </nav>
           <div

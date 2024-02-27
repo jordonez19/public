@@ -19,7 +19,7 @@ footer p {
 
 footer p a {
   color: v.$white;
-  transition: all .3s;
+  transition: all 0.3s;
   position: relative;
   z-index: 3;
 }
@@ -29,7 +29,7 @@ footer p a:hover {
 }
 
 footer::before {
-  background: url('/assets/images/contact-dec-01.png');
+  background: url("/assets/images/contact-dec-01.png");
   position: absolute;
   left: 30px;
   transform: rotate(180deg);
@@ -37,7 +37,7 @@ footer::before {
   bottom: 0;
   width: 318px;
   height: 119px;
-  content: '';
+  content: "";
   z-index: 2;
 }
 
@@ -64,7 +64,7 @@ body {
   .main-banner .owl-nav {
     left: 30px !important;
   }
-  .event_filter  {
+  .event_filter {
     padding: 15px 20px;
   }
   .event_filter li {

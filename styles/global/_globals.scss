@@ -4,7 +4,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 ::selection {
@@ -56,7 +56,7 @@
   line-height: 40px;
   padding: 0px 25px;
   border-radius: 20px;
-  transition: all .3s;
+  transition: all 0.3s;
 }
 
 .main-button a:hover {
@@ -64,11 +64,21 @@
   color: v.$white;
 }
 
-.cursor-pointer{
+.cursor-pointer {
   cursor: pointer;
 }
-.wrapper{
+.wrapper {
   margin-top: 80px;
   min-height: 80vh;
   padding: 25px;
+}
+.text-primary-color {
+  color: v.$primary-color;
+}
+.text-third-color {
+  color: v.$third-color;
+}
+
+.logo_modal_course {
+  width: 100%;
 }
