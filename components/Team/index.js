@@ -30,7 +30,7 @@ const Team = () => {
                 <div className="main-content">
                   <img style={{ boxShadow: '0 0 5px #cecece' }} src="team/nury.jpg" alt="" />
                   <span className="category">Agente de Viajes</span>
-                  <h4>Nury </h4>
+                  <h4>Nury Buitrago </h4>
                 </div>
               </div>
             </div>
