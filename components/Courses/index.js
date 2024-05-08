@@ -8,13 +8,14 @@ import 'swiper/css/free-mode';
 import 'swiper/css/pagination';
 import { Autoplay, Pagination, FreeMode } from 'swiper/modules';
 import Link from "next/link";
+import Image from "next/image";
 
 
 const Courses = () => {
   // Definir el objeto con la información de las tarjetas
   const cardsData = [
     {
-      image: "box_icon.png",
+      image: "/box_icon.png",
       title: 'Gestión de carga',
       points: [
         "Métricas en tiempo real",
@@ -29,7 +30,7 @@ const Courses = () => {
       buttonText: "Más información"
     },
     {
-      image: "sign_icon.png",
+      image: "/sign_icon.png",
       title: 'Firma electrónica',
       points: [
         "Digitalización de documentos",
@@ -45,7 +46,7 @@ const Courses = () => {
       buttonText: "Más información"
     },
     {
-      image: "chat_icon.png",
+      image: "/chat_icon.png",
       title: 'Chat para Empresas',
       points: [
         "Atención al cliente",
@@ -59,7 +60,7 @@ const Courses = () => {
       buttonText: "Más información"
     },
     {
-      image: "box_icon.png",
+      image: "/box_icon.png",
       title: 'Gestión de carga',
       points: [
         "Métricas en tiempo real",
@@ -74,7 +75,7 @@ const Courses = () => {
       buttonText: "Más información"
     },
     {
-      image: "sign_icon.png",
+      image: "/sign_icon.png",
       title: 'Firma electrónica',
       points: [
         "Digitalización de documentos",
@@ -90,7 +91,7 @@ const Courses = () => {
       buttonText: "Más información"
     },
     {
-      image: "chat_icon.png",
+      image: "/chat_icon.png",
       title: 'Chat para Empresas',
       points: [
         "Atención al cliente",
@@ -140,7 +141,7 @@ const Courses = () => {
                 {cardsData.map((card, index) => (
                   <SwiperSlide key={index} className="p-4 my-3 text-start d-flex flex-column justify-content-between ">
                     <div>
-                      <img
+                      <Image width={'130'} height={'130'}
                         style={{
                           border: '1px solid #cfcef3',
                           padding: 30,
@@ -156,7 +157,6 @@ const Courses = () => {
                           e.target.style.padding = '30px';
                           e.target.style.transform = 'rotate(-10deg)';
                         }}
-                        width={130}
                         src={card.image}
                         alt="Avatar"
                         className=" mb-5"

@@ -1,5 +1,6 @@
 /* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable @next/next/no-img-element */
+import Image from "next/image";
 import React from "react";
 
 const Services = () => {
@@ -9,14 +10,16 @@ const Services = () => {
       <div className="services section" id="services">
         <h2 className="section-title-services  p-0">
           CARACTERÍSTICAS QUE HACEN A <br />
-          <img style={{ marginTop: -6 }} width={245} src="/soslogic.png" /> INCREÍBLE
+          <Image
+            width={245} height={52} style={{ marginTop: -6 }} src="/soslogic.png" /> INCREÍBLE
         </h2>
         <div className="container">
           <div className="row">
             <div className="col-lg-4 col-md-6">
               <div className="service-item">
                 <div className="icon" style={{ background: '#5044EB' }}>
-                  <img
+                  <Image
+                    width={200} height={60}
                     src="/alza.png"
 
                     alt="gestión de operaciones"
@@ -36,7 +39,8 @@ const Services = () => {
             <div className="col-lg-4 col-md-6">
               <div className="service-item">
                 <div className="icon" style={{ background: '#66D5EC' }}>
-                  <img
+                  <Image
+                    width={200} height={110}
                     src="/enchufe.png"
                     alt="toma de decisiones"
                   />
@@ -56,7 +60,8 @@ const Services = () => {
             <div className="col-lg-4 col-md-6">
               <div className="service-item">
                 <div className="icon" style={{ background: '#5044EB' }}>
-                  <img
+                  <Image
+                    width={200} height={75}
                     src="/chip.png"
                     alt="escalable y personalizable"
                   />

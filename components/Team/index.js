@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
+import Image from "next/image";
 import React from "react";
 
 const Team = () => {
@@ -10,7 +11,7 @@ const Team = () => {
             <div className="col-lg-4 col-md-6">
               <div className="team-member">
                 <div className="main-content">
-                  <img style={{ boxShadow: '0 0 5px #cecece' }} src="team/pilar.jpg" alt="" />
+                  <Image width={300} height={300} style={{ boxShadow: '0 0 5px #cecece' }} src="team/pilar.jpg" alt="" />
                   <span className="category">Gerente</span>
                   <h4>Pilar Rojas</h4>
                 </div>
@@ -19,7 +20,7 @@ const Team = () => {
             <div className="col-lg-4 col-md-6">
               <div className="team-member">
                 <div className="main-content">
-                  <img style={{ boxShadow: '0 0 5px #cecece' }} src="team/gonzalo.jpg" alt="" />
+                  <Image width={300} height={300} style={{ boxShadow: '0 0 5px #cecece' }} src="team/gonzalo.jpg" alt="" />
                   <span className="category">Guia profesional</span>
                   <h4>Gonzalo Tolosa</h4>
                 </div>
@@ -28,7 +29,7 @@ const Team = () => {
             <div className="col-lg-4 col-md-6">
               <div className="team-member">
                 <div className="main-content">
-                  <img style={{ boxShadow: '0 0 5px #cecece' }} src="team/nury.jpg" alt="" />
+                  <Image width={300} height={300} style={{ boxShadow: '0 0 5px #cecece' }} src="team/nury.jpg" alt="" />
                   <span className="category">Agente de Viajes</span>
                   <h4>Nury Buitrago </h4>
                 </div>

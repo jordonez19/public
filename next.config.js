@@ -6,9 +6,6 @@ const nextConfig = {
   sassOptions: {
     includePaths: [path.join(__dirname, "styles")],
   },
-  babel: {
-    presets: ["next/babel"],
-  },
 };
 
 module.exports = nextConfig;

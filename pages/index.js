@@ -6,6 +6,7 @@ import Preloader from "@/components/Loader";
 import Services from "@/components/Services";
 import Aboutus from "@/components/Aboutus";
 import Contactus from "@/components/Contactus";
+import Testimonials from "@/components/Testimonials";
 
 // Importa los componentes de forma diferida (lazy)
 const Banner = lazy(() => import("@/components/Banner"));
@@ -33,7 +34,7 @@ export default function Home() {
         <Services />
         {/* <Aboutus /> */}
         {/* <Team /> */}
-        {/* <Testimonials /> */}
+        <Testimonials />
         <Contactus />
       </MainLayout>
     </>

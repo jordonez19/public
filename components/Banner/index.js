@@ -3,6 +3,7 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 const imagenes_banner = [
   {
@@ -53,10 +54,10 @@ const Banner = () => {
 
   return (
     <>
-      <img className="fadeIn shape-banner d-none d-md-block" src="/banner/hero-shape.png" loading="lazy" alt="Hero shape" />
-      <img className="fadeIn shape-banner-left" src="/banner/blur-layer.png" loading="lazy" alt="Blur layer" />
-      <img className="fadeIn shape-banner-bottom" src="/banner/half-circle.png" loading="lazy" alt="Half circle" />
-      <img className="fadeIn banner-people_team" src="/banner/people_team.png" loading="lazy" alt="People team" />
+      <Image width={'800'} height={'800'} className="fadeIn shape-banner d-none d-md-block" src="/banner/hero-shape.png" loading="lazy" alt="Hero shape" />
+      <Image width={'700'} height={'700'} className="fadeIn shape-banner-left" src="/banner/blur-layer.png" loading="lazy" alt="Blur layer" />
+      <Image width={'200'} height={'200'} className="fadeIn shape-banner-bottom" src="/banner/half-circle.png" loading="lazy" alt="Half circle" />
+      <Image width={'800'} height={'800'} className="fadeIn banner-people_team" src="/banner/people_team.png" loading="lazy" alt="People team" />
       <div className="main-banner" id="">
         <div className="container">
           <div className="row">

@@ -8,6 +8,7 @@ import {
 } from "@ant-design/icons";
 import Link from "next/link";
 import ShoppingCart from "../ShoppingCart";
+import Image from "next/image";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -62,12 +63,11 @@ const Navbar = () => {
   };
 
   const handleLinkClick = () => {
-    setMenuOpen(false); // Cierra el menú al hacer clic en un enlace
+    setMenuOpen(false); 
   };
 
   return (
     <>
-
       <Drawer title="Basic Drawer" onClose={onClose} open={open}>
         <p>Some contents...</p>
         <p>Some contents...</p>
@@ -78,9 +78,10 @@ const Navbar = () => {
         <div className="header__content">
           <div className="logo_container">
             <Link href="/">
-              <img
+              <Image
+                width={200} height={50}
                 className={`logo-img ${isFixed ? "fixed" : ""}`}
-                src="sos_soslogic.png"
+                src="/sos_soslogic.png"
                 alt="logo-img"
               />
             </Link>
