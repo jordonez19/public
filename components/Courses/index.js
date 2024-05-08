@@ -58,6 +58,51 @@ const Courses = () => {
       link: "#contact",
       buttonText: "Más información"
     },
+    {
+      image: "box_icon.png",
+      title: 'Gestión de carga',
+      points: [
+        "Métricas en tiempo real",
+        "Inspección de vehículos y otros",
+        "Radicación de documentos ante el RNDC.",
+        "Control de anticipos y gastos de viaje",
+        "Cumplidos virtuales",
+        "Control de porcentajes de anulaciones ante el RNDC en tiempo real.",
+        "Implementación de prácticas sostenibles para reducir el impacto ambiental de las operaciones de carga."
+      ],
+      link: "#contact",
+      buttonText: "Más información"
+    },
+    {
+      image: "sign_icon.png",
+      title: 'Firma electrónica',
+      points: [
+        "Digitalización de documentos",
+        "Firma simple y con reconocimiento facial",
+        "Notificación vía correo electrónico o WhatsApp",
+        "Trazabilidad y seguimiento del proceso de firma",
+        "Respaldo y accesibilidad a la información 24/7",
+        "Confidencialidad de la información",
+        "Reducción de gastos en papelería y mensajería",
+        "Protección del medio ambiente."
+      ],
+      link: "#contact",
+      buttonText: "Más información"
+    },
+    {
+      image: "chat_icon.png",
+      title: 'Chat para Empresas',
+      points: [
+        "Atención al cliente",
+        "Resolución de consultas e inquietudes de forma inmediata",
+        "Interacción personalizada y amigable con los usuarios",
+        "Notificaciones automáticas para seguimiento de conversaciones",
+        "Registro y archivo de historial de conversaciones para referencia futura y mejora de la atención al cliente",
+        "Soporte multicanal para llegar a los usuarios en cualquier momento y lugar",
+      ],
+      link: "#contact",
+      buttonText: "Más información"
+    },
   ];
 
 
@@ -76,9 +121,6 @@ const Courses = () => {
                 loop={true}
                 freeMode={true}
                 grabCursor={true}
-                pagination={{
-                  clickable: true,
-                }}
                 breakpoints={{
                   768: {
                     slidesPerView: 3,
