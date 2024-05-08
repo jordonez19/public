@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Button, Drawer, Space } from "antd";
 
 const PoliciesDrawer = ({ onClose, open }) => {
@@ -21,16 +21,8 @@ const PoliciesDrawer = ({ onClose, open }) => {
       >
         <div style={{ flex: 1, overflowY: "auto" }} className="content container">
           <p>
-            <h2>POLÍTICA DE SOSTENIBILIDAD:</h2>
-            Para Tolima adventure es muy importante que nuestras acciones hoy
-            impacten positivamente a las generaciones futuras, por eso hemos
-            establecido una Política de Sostenibilidad que deja en claro la
-            finalidad de estar comprometidos a realizar un turismo sostenible
-            mediante la operación de productos con un enfoque de sostenibilidad
-            ambiental, sociocultural y económica con unas buenas prácticas en la
-            operación, de una manera segura y respetuosa de acuerdo con la
-            legislación y regulaciones pertinentes. Ejemplo de estas acciones
-            son:
+            <h2 className="text-primary-color">POLÍTICA DE SOSTENIBILIDAD DE SOSLOGIC:</h2>
+            En SOSLogic, creemos en el poder transformador de la tecnología para construir un futuro sostenible y equitativo. Nuestra Política de Sostenibilidad refleja nuestro compromiso con la innovación responsable y el cuidado del medio ambiente. Algunas de nuestras acciones incluyen:
             <ul className="dot-li">
               <li>
                 <svg
@@ -45,10 +37,7 @@ const PoliciesDrawer = ({ onClose, open }) => {
                     fill="rgba(157,2,42,1)"
                   ></path>
                 </svg>
-                Motivar y capacitar a nuestros colaboradores con acciones
-                formativas y de concientización sobre los principios de
-                sostenibilidad, la salvaguarda de patrimonio y buenas prácticas
-                de turismo.
+                Desarrollar tecnologías innovadoras que promuevan la eficiencia energética y la reducción de emisiones de carbono.
               </li>
               <li>
                 <svg
@@ -63,8 +52,7 @@ const PoliciesDrawer = ({ onClose, open }) => {
                     fill="rgba(157,2,42,1)"
                   ></path>
                 </svg>
-                Realizar convocatorias para las comunidades donde se generan
-                oportunidades de empleo al interior de la Tolima Adventure.
+                Fomentar un entorno de trabajo inclusivo y diverso, donde se valoren las habilidades de cada individuo, independientemente de su origen o identidad.
               </li>
               <li>
                 <svg
@@ -79,8 +67,7 @@ const PoliciesDrawer = ({ onClose, open }) => {
                     fill="rgba(157,2,42,1)"
                   ></path>
                 </svg>
-                Trabajar con proveedores que promuevan las buenas prácticas para
-                el desarrollo del turismo sostenible.
+                Implementar prácticas de gestión de residuos electrónicos responsables, incluido el reciclaje y la reutilización de equipos informáticos.
               </li>
               <li>
                 <svg
@@ -95,8 +82,7 @@ const PoliciesDrawer = ({ onClose, open }) => {
                     fill="rgba(157,2,42,1)"
                   ></path>
                 </svg>
-                Buscar mantener condiciones de empleo directo, en condiciones
-                justas y equitativas.
+                Colaborar con proveedores comprometidos con prácticas éticas y sostenibles en la cadena de suministro de tecnología.
               </li>
               <li>
                 <svg
@@ -111,99 +97,14 @@ const PoliciesDrawer = ({ onClose, open }) => {
                     fill="rgba(157,2,42,1)"
                   ></path>
                 </svg>
-                Promover el cumplimiento de las normas de seguridad a los
-                proveedores en la prestación del servicio.
-              </li>
-              <li>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  width="18"
-                  height="18"
-                  className="mr-2"
-                >
-                  <path
-                    d="M16 12L10 18V6L16 12Z"
-                    fill="rgba(157,2,42,1)"
-                  ></path>
-                </svg>
-                Promover el uso de bienes y servicios producidos por comunidades
-                locales en los destinos donde funciona la operación.
-              </li>
-              <li>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  width="18"
-                  height="18"
-                  className="mr-2"
-                >
-                  <path
-                    d="M16 12L10 18V6L16 12Z"
-                    fill="rgba(157,2,42,1)"
-                  ></path>
-                </svg>
-                Contratar personas con discapacidad en la cadena de valor.
-              </li>
-              <li>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  width="18"
-                  height="18"
-                  className="mr-2"
-                >
-                  <path
-                    d="M16 12L10 18V6L16 12Z"
-                    fill="rgba(157,2,42,1)"
-                  ></path>
-                </svg>
-                Cómo mínimo el 80% de lo que paga Un viajero se queda en manos
-                de nuestros anfitriones.
-              </li>
-              <li>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  width="18"
-                  height="18"
-                  className="mr-2"
-                >
-                  <path
-                    d="M16 12L10 18V6L16 12Z"
-                    fill="rgba(157,2,42,1)"
-                  ></path>
-                </svg>
-                Inclusión de poblaciones vulnerables con prácticas de un turismo
-                para todos.
-              </li>
-              <li>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  width="18"
-                  height="18"
-                  className="mr-2"
-                >
-                  <path
-                    d="M16 12L10 18V6L16 12Z"
-                    fill="rgba(157,2,42,1)"
-                  ></path>
-                </svg>
-                Establecer un código de conducta o comportamiento para los
-                viajeros con el fin de minimizar los impactos de la visita a los
-                destinos.
+                Apoyar iniciativas comunitarias que promuevan la alfabetización digital y el acceso equitativo a la tecnología.
               </li>
             </ul>
             <p>
-              {" "}
-              Con la divulgación de esta política, Tolima Adventure insta a sus
-              colaboradores, proveedores, colegas y participantes en la cadena
-              de valor de la industria turística a hacer explícito su compromiso
-              en el desarrollo sostenible.
+              Con esta política, en SOSLogic nos comprometemos a liderar con el ejemplo y a trabajar en colaboración con nuestros empleados, clientes y socios para hacer del mundo un lugar mejor mediante la tecnología.
             </p>
-            <h2>HUELLA DE CARBONO:</h2>
-            <h3>Compensamos la huella de carbono de los viajes:</h3>
+            <h2 className="text-primary-color">REDUCCIÓN DE LA HUELLA DE CARBONO:</h2>
+            <h3 className="text-primary-color">Nuestro compromiso con un futuro más limpio:</h3>
             <ul className="dot-li">
               <li>
                 <svg
@@ -218,8 +119,7 @@ const PoliciesDrawer = ({ onClose, open }) => {
                     fill="rgba(157,2,42,1)"
                   ></path>
                 </svg>
-                Operando destinos cercanos y conectado los atractivos con medios
-                de transporte eco amigables
+                Fomentando el trabajo remoto y la virtualización de eventos para reducir la necesidad de viajes y la huella de carbono asociada.
               </li>
               <li>
                 <svg
@@ -234,9 +134,7 @@ const PoliciesDrawer = ({ onClose, open }) => {
                     fill="rgba(157,2,42,1)"
                   ></path>
                 </svg>
-                Minimizando el uso de botellas de plástico usando botellas de
-                vidrio y sistemas especiales de filtración para evitar el uso de
-                botellas de plástico
+                Implementando prácticas de gestión energética en nuestras instalaciones, incluida la adopción de fuentes de energía renovable siempre que sea posible.
               </li>
               <li>
                 <svg
@@ -251,8 +149,7 @@ const PoliciesDrawer = ({ onClose, open }) => {
                     fill="rgba(157,2,42,1)"
                   ></path>
                 </svg>
-                Nuestros viajeros reciben termos de agua reutilizables para usar
-                durante actividades y caminatas
+                Promoviendo la conciencia ambiental entre nuestros empleados y clientes, incentivando prácticas sostenibles en su vida diaria.
               </li>
               <li>
                 <svg
@@ -267,39 +164,7 @@ const PoliciesDrawer = ({ onClose, open }) => {
                     fill="rgba(157,2,42,1)"
                   ></path>
                 </svg>
-                Promoviendo en los proveedores el uso de artículos de aseo
-                personal biodegradables en lugar de las amenidades de plástico
-                de un solo uso
-              </li>
-              <li>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  width="18"
-                  height="18"
-                  className="mr-2"
-                >
-                  <path
-                    d="M16 12L10 18V6L16 12Z"
-                    fill="rgba(157,2,42,1)"
-                  ></path>
-                </svg>
-                Realizando campaña de oxigenación y limpieza de los atractivos.
-              </li>
-              <li>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  width="18"
-                  height="18"
-                  className="mr-2"
-                >
-                  <path
-                    d="M16 12L10 18V6L16 12Z"
-                    fill="rgba(157,2,42,1)"
-                  ></path>
-                </svg>
-                Respetando la capacidad de carga de los lugares que visitamos
+                Compensando nuestras emisiones de carbono mediante la participación en proyectos de reforestación y conservación del medio ambiente.
               </li>
             </ul>
           </p>

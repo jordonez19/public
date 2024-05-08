@@ -95,6 +95,9 @@ a#nav-dropdown-light-example {
 .text-primary-color {
   color: v.$primary-color;
 }
+.text-primary {
+  color: v.$primary-color !important;
+}
 .text-third-color {
   color: v.$third-color;
 }
