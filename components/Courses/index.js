@@ -179,7 +179,7 @@ const Courses = () => {
       <section className="section courses" id="courses">
         <div className="text-center">
           <img
-            src="logoHred.png"
+            src="sos_soslogic.png"
             alt="logo-img"
             className="logo_preset"
           />

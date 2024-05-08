@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import React, { useEffect, useState } from "react";
+import { Drawer } from 'antd';
 import {
   MenuOutlined,
   CloseOutlined,
@@ -15,6 +16,14 @@ const Navbar = () => {
     width: undefined,
     height: undefined,
   });
+
+  const [open, setOpen] = useState(false);
+  const showDrawer = () => {
+    setOpen(true);
+  };
+  const onClose = () => {
+    setOpen(false);
+  };
 
   useEffect(() => {
     const handleResize = () => {
@@ -58,13 +67,20 @@ const Navbar = () => {
 
   return (
     <>
-      <header className={`slideInDown header ${isFixed ? "fixed-navbar" : ""}`}>
+
+      <Drawer title="Basic Drawer" onClose={onClose} open={open}>
+        <p>Some contents...</p>
+        <p>Some contents...</p>
+        <p>Some contents...</p>
+      </Drawer>
+
+      <header className={`mt-4 header ${isFixed ? "fixed-navbar" : ""}`}>
         <div className="header__content">
           <div className="logo_container">
             <Link href="/">
               <img
                 className={`logo-img ${isFixed ? "fixed" : ""}`}
-                src="logoHred.png"
+                src="sos_soslogic.png"
                 alt="logo-img"
               />
             </Link>
@@ -72,32 +88,32 @@ const Navbar = () => {
           <nav className={`header__content__nav ${menuOpen ? "isMenu" : ""}`}>
             <ul>
               <li>
-                <Link href="#top" onClick={handleLinkClick}>
+                <Link className="menu-link" href="#top" onClick={handleLinkClick}>
                   Inicio
                 </Link>
               </li>
               <li>
-                <Link href="#services" onClick={handleLinkClick}>
+                <Link className="menu-link" href="#services" onClick={handleLinkClick}>
                   Servicios
                 </Link>
               </li>
               <li>
-                <Link href="#aboutus" onClick={handleLinkClick}>
+                <Link className="menu-link" href="#aboutus" onClick={handleLinkClick}>
                   Nosotros
                 </Link>
               </li>
               <li>
-                <Link href="#courses" onClick={handleLinkClick}>
+                <Link className="menu-link" href="#courses" onClick={handleLinkClick}>
                   Productos
                 </Link>
               </li>
               {/*  <li>
-                <Link href="#events" onClick={handleLinkClick}>
+                <Link className="menu-link" href="#events" onClick={handleLinkClick}>
                   Eventos
                 </Link>
               </li> */}
               {/*  <li>
-                <Link href="#contact" onClick={handleLinkClick}>
+                <Link className="menu-link" href="#contact" onClick={handleLinkClick}>
                   Contáctenos
                 </Link>
               </li> */}
@@ -105,12 +121,13 @@ const Navbar = () => {
             <Link
               href={`#contact`}
             >
-              <button className="me-2">Contactar</button>
+              <button className="me-2 ">Contactar</button>
             </Link>
+            <MenuOutlined
+              className="ms-3 d-block d-md-none " style={{ fontSize: 35 }} onClick={showDrawer} />
           </nav>
           <div
-            className={`header__content__toggle ${isFixed ? "fixed__toogle" : ""
-              }`}
+            className={`header__content__toggle ${isFixed ? "fixed__toogle" : ""}`}
           >
             {!menuOpen ? (
               <MenuOutlined onClick={menuToggleHandler} />

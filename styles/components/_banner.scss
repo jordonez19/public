@@ -1,12 +1,13 @@
 @use "../global/variables" as v;
 
-.main-banner {
-  background-image: url("/banner-bg.png");
-  background-position: right bottom;
-  background-repeat: no-repeat;
-  background-size: cover;
-  padding: 170px 0px 120px 0px;
+.shape-banner{
+  position: absolute;
+  height: auto;
+  top: 0;
+  right: 0;
+  z-index: -1;
 }
+
 .header-text {
   width: 100%;
   @include v.breakpoint(md-custom) {
