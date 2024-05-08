@@ -41,14 +41,16 @@ const Footer = () => {
       <footer>
         <div className="container">
           <div className="col-lg-12">
+            <div className="d-flex justify-content-center">
+              <p>Politicas de: </p>
+              <p className="ms-2" style={{ textDecoration: 'underline', cursor: 'pointer' }} onClick={showConditionsModal}> Sostenibilidad, </p>
+              <p className="mx-2" style={{ textDecoration: 'underline', cursor: 'pointer' }} onClick={showprivacidadModal}>Privacidad </p>
+              <p>y  </p>
+              <p className="ms-2" style={{ textDecoration: 'underline', cursor: 'pointer' }} onClick={showservicesModal}> Servicios</p>
+            </div>
             <p>
               Copyright © 2023 todos los derechos reservados. &nbsp;&nbsp;&nbsp; <img width={200} src="/sos_soslogic_white.png" />
             </p>
-            <div className="d-flex justify-content-center">
-              <p className="" style={{ textDecoration: 'underline', cursor: 'pointer' }} onClick={showConditionsModal}>Politica de sostenibilidad </p>
-              <p className="mx-2" style={{ textDecoration: 'underline', cursor: 'pointer' }} onClick={showprivacidadModal}>Politica de privacidad </p>
-              <p style={{ textDecoration: 'underline', cursor: 'pointer' }} onClick={showservicesModal}>Politica de Servicios</p>
-            </div>
           </div>
         </div>
       </footer>

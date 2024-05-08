@@ -4,25 +4,24 @@ import React from "react";
 const Services = () => {
   return (
     <>
-    
+
       <div className="services section" id="services">
 
         <div className="container">
           <div className="row">
             <div className="col-lg-4 col-md-6">
               <div className="service-item">
-                <div className="icon">
+                <div className="icon" style={{ background: '#5044EB' }}>
                   <img
-                    src="assets/images/service-02.png"
+                    src="/alza.png"
+
                     alt="gestión de operaciones"
                   />
                 </div>
                 <div className="main-content">
-                  <h4>Paquetes Turísticos</h4>
+                  <h4>Más Económico</h4>
                   <p>
-                    Descubre una variedad de paquetes turísticos diseñados para
-                    satisfacer tus deseos de aventura, relajación y exploración en
-                    destinos emocionantes del Tolima.
+                    Planes anuales o mensuales que se ajustan a tu crecimiento, nunca pagues extra.
                   </p>
                   {/* <div className="main-button">
                   <a href="#">Leer Más</a>
@@ -32,18 +31,17 @@ const Services = () => {
             </div>
             <div className="col-lg-4 col-md-6">
               <div className="service-item">
-                <div className="icon">
+                <div className="icon" style={{ background: '#66D5EC' }}>
                   <img
-                    src="assets/images/service-01.png"
+                    src="/enchufe.png"
                     alt="toma de decisiones"
                   />
                 </div>
                 <div className="main-content">
-                  <h4>Experiencias Únicas</h4>
+                  <h4>Sin instalaciones
+                  </h4>
                   <p>
-                    Sumérgete en experiencias únicas que te permitirán explorar la
-                    cultura local, disfrutar de la gastronomía auténtica y
-                    participar en actividades emocionantes.
+                    Un navegador web y una conexión a internet es todo lo que necesitas para operar tu centro de contacto.
                   </p>
                   {/* <div className="main-button">
                   <a href="#">Leer Más</a>
@@ -53,17 +51,16 @@ const Services = () => {
             </div>
             <div className="col-lg-4 col-md-6">
               <div className="service-item">
-                <div className="icon">
+                <div className="icon" style={{ background: '#5044EB' }}>
                   <img
-                    src="assets/images/service-03.png"
+                    src="/chip.png"
                     alt="escalable y personalizable"
                   />
                 </div>
                 <div className="main-content">
-                  <h4>Asistencia Personalizada</h4>
+                  <h4>Sin hardware</h4>
                   <p>
-                    Asistencia personalizada en cada paso de tu viaje,
-                    desde la planificación hasta la ejecución brindandote apoyo en todo momento.
+                    No tendrás que invertir en hardware ni instalar software adicional; funciona desde la nube.
                   </p>
                   {/* <div className="main-button">
                   <a href="#">Leer Más</a>

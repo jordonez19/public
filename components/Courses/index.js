@@ -1,201 +1,160 @@
 /* eslint-disable @next/next/no-img-element */
+import React from "react";
+import { Card, Button } from "antd";
+import { ArrowRightOutlined } from "@ant-design/icons";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/free-mode';
+import 'swiper/css/pagination';
+import { Autoplay, Pagination, FreeMode } from 'swiper/modules';
 import Link from "next/link";
-import React, { useState } from "react";
-import { Modal, Button, Row, Col } from "antd";
+
 
 const Courses = () => {
-  const [modalData, setModalData] = useState(null);
-
-  const openModal = (experiencia) => {
-    setModalData(experiencia);
-  };
-
-  const closeModal = () => {
-    setModalData(null);
-  };
-  const eventos = [
+  // Definir el objeto con la información de las tarjetas
+  const cardsData = [
     {
-      imagen: "cuevaeden/cave.jpeg",
-      categoria: "design",
-      precio: "",
-      autor: "Un viaje a la Colombia subterránea",
-      titulo: "La cueva del Edén"
+      image: "box_icon.png",
+      title: 'Gestión de carga',
+      points: [
+        "Métricas en tiempo real",
+        "Inspección de vehículos y otros",
+        "Radicación de documentos ante el RNDC.",
+        "Control de anticipos y gastos de viaje",
+        "Cumplidos virtuales",
+        "Control de porcentajes de anulaciones ante el RNDC en tiempo real.",
+        "Implementación de prácticas sostenibles para reducir el impacto ambiental de las operaciones de carga."
+      ],
+      link: "/experiencias",
+      buttonText: "Más información"
     },
     {
-      imagen: "citytour/melgar.jpg",
-      categoria: "development",
-      precio: "",
-      autor: "Una historia entre cordilleras y agua",
-      titulo: "City Tour Melgar"
+      image: "sign_icon.png",
+      title: 'Firma electrónica',
+      points: [
+        "Digitalización de documentos",
+        "Firma simple y con reconocimiento facial",
+        "Notificación vía correo electrónico o WhatsApp",
+        "Trazabilidad y seguimiento del proceso de firma",
+        "Respaldo y accesibilidad a la información 24/7",
+        "Confidencialidad de la información",
+        "Reducción de gastos en papelería y mensajería",
+        "Protección del medio ambiente."
+      ],
+      link: "/experiencias",
+      buttonText: "Más información"
     },
     {
-      imagen: "icononzo/1.jpg",
-      categoria: "design wordpress",
-      precio: "",
-      autor: "Balcón del Tolima",
-      titulo: "Icononzo"
+      image: "chat_icon.png",
+      title: 'Chat para Empresas',
+      points: [
+        "Atención al cliente",
+        "Resolución de consultas e inquietudes de forma inmediata",
+        "Interacción personalizada y amigable con los usuarios",
+        "Notificaciones automáticas para seguimiento de conversaciones",
+        "Registro y archivo de historial de conversaciones para referencia futura y mejora de la atención al cliente",
+        "Soporte multicanal para llegar a los usuarios en cualquier momento y lugar",
+      ],
+      link: "/experiencias",
+      buttonText: "Más información"
     },
-    {
-      imagen: "bananitobaby/2.png",
-      categoria: "development",
-      precio: "",
-      autor: "Con sabor a cordillera",
-      titulo: "Bananito baby"
-    },
-    {
-      imagen: "cascadas/1.jpg",
-      categoria: "wordpress development",
-      precio: "",
-      autor: "Cascada Las Golondrinas",
-      titulo: "Canyoning"
-    }
   ];
 
-  const experienciasTuristicas = [
-    {
-      nombre: "La cueva del Edén, un viaje a la Colombia subterránea",
-      descripcion: "Bienvenidos a un viaje de conexión con la Colombia subterránea en la Cueva del Edén, un encuentro con una riqueza natural que por millones de años se ha estado formado bajo los verdes relieves montañosos de la cordillera oriental en una de las cuevas iconos de Tolima y Colombia. Después de visitar Cunday, realizaremos un recorrido en senderismo, nos sumergimos en la oscuridad y silencio totales, interrumpidos únicamente por la luz de las linternas y el ruido que hacen los pies  con cada paso que damos.En la  cueva del Edén conoceremos las historias que se esconden en sus bóvedas y ríos subterráneos, que son además el hogar de criaturas que viven en una noche eterna.",
-      disponibilidad: "Todos los días",
-      idiomas: ["SPN", "ENG"],
-      duracion: "12 horas",
-      horaSalida: "7:00 am",
-      tamanoGrupo: "Máximo 10 personas",
-      puntoSalida: "Parque deportivo y recreativo Las Vegas (Melgar)",
-      imagen: "cuevaeden/cave.jpeg",
-      incluye: [
-        "Actividades: visita Basílica de la virgen del Carmen de Apicalá y parque Cunday, senderismo, espeleismo",
-        "Transporte en vehículo especial de turismo desde Melgar hasta Cunday",
-        "Desplazamiento en vehículos 4x4 hasta inicio de sendero",
-        "Acompañamiento de Informador turístico y guía local baquiano al interior de la cueva",
-        "Charla de inducción y equipo de seguridad",
-        "Hidratación, desayuno, almuerzo",
-        "Tarjeta de asistencia médica"
-      ],
-      recomendaciones: [
-        "Lleva ropa para recambio",
-        "Usar calzado cómodo para caminata",
-        "Utiliza protector solar para evitar posibles quemaduras.",
-        "Llevar morral",
-        "Intenta llevar tu propio termo para el agua y evita el uso de botellas de plástico para ayudar al planeta."
-      ]
-    },
-    {
-      nombre: "City Tour Melgar, una historia entre cordilleras y agua",
-      descripcion: "La experiencia es un recorrido en bus panorámico que nos permite viajar a través del tiempo para conocer los lugares, acontecimientos y personajes que dan forma al proceso de consolidación del principal destino turístico del Tolima, acompañado de historias que se entretejen con la riqueza cultural y que invitan a reinterpretar con nuevo espíritu la memoria e identidad de un territorio multifacético que emerge en medio de los verdes relieves montañosos de la cordillera oriental, rodeado de aguas bajo cielo azul donde se respiran seguridad y descanso.",
-      disponibilidad: "Todos los días",
-      idiomas: ["SPN", "ENG"],
-      duracion: "2.5 horas",
-      horaSalida: "9:00 am – 3:00 pm",
-      tamanoGrupo: "Máximo 32 personas",
-      puntoSalida: "Parque deportivo y recreativo Las Vegas (Melgar)",
-      imagen: "citytour/melgar.jpg",
-      incluye: [
-        "Visita atractivos: Mirador la Cajita, Terminal de Transportes Melgar, Experiencia artesanal Togua, Parque Gustavo Rojas Pinilla y mirador Playa Alta.",
-        "Transporte en vehículo especial de turismo",
-        "Acompañamiento de Informador turístico",
-        "Hidratación, refrigerio y souvenir",
-        "Tarjeta de asistencia médica"
-      ],
-      recomendaciones: [
-        "Lleva ropa Y calzado cómodo",
-        "Utiliza protector solar para evitar posibles quemaduras.",
-        "Intenta llevar tu propio termo para el agua y evita el uso de botellas de plástico para ayudar al planeta."
-      ]
-    },
-    {
-      nombre: "Icononzo, balcón del Tolima",
-      descripcion: "Llamado el “Balcón del Oriente del Tolima” por la maravillosa vista que se tiene desde estas colinas y praderas, su belleza radica en la combinación del verde de su flora y fauna con los hermosos atardeceres que se pueden apreciar en todo su esplendor, haciendo de este destino el lugar perfecto si buscas tranquilidad y conexión con la naturaleza. En medio de paisajes llenos de historias y miradores perfectos para la fotografía, visitaremos entre muchas cosas una maravilla que en forma de puente parece suspendida en el aire en medio de los relieves montañosos cortados por el río Sumapaz, haremos un viaje por el mundo sin salir del museo de Henry Castillo y conoceremos la arquitectura y modo de vivir de la cultura tolimense en un pueblito viejo.",
-      disponibilidad: "Todos los días",
-      idiomas: ["SPN", "ENG"],
-      duracion: "8 horas",
-      horaSalida: "9:00 am",
-      tamanoGrupo: "Máximo 32 personas",
-      puntoSalida: "Parque deportivo y recreativo Las Vegas (Melgar)",
-      imagen: "icononzo/1.jpg",
-      incluye: [
-        "Visita atractivos: Mirador alto de la Cruz, Museo Henry Castillo, Puente Natural de Pandi, Ecoglaxury, Pueblito viejo",
-        "Transporte en vehículo especial de turismo",
-        "Acompañamiento de Informador turístico",
-        "Hidratación, almuerzo, refrigerio",
-        "Tarjeta de asistencia médica"
-      ],
-      recomendaciones: [
-        "Lleva ropa y calzado cómodo",
-        "Utiliza protector solar para evitar posibles quemaduras.",
-        "Intenta llevar tu propio termo para el agua y evita el uso de botellas de plástico para ayudar al planeta."
-      ]
-    },
-    {
-      nombre: "Bananito baby, con sabor a cordillera",
-      descripcion: "Nuestra experiencia de agro turismo empieza cuando la mañana nos abre paso en medio de la cordillera por caminos interconectados que nos llevan a la vereda el Águila, un viaje en medio de potreros que relumbran con el color verde esmeralda de los pastos sabaneros de fincas dedicadas en otros tiempos a cultivos de café, que nos lleva a nuestro destino, la Finca san Andrés donde van surgiendo de manera espontánea los saludos de buenos días y las conversaciones de trato afable y cercano de sus propietarios. La Finca San Andrés es un predio familiar dedicado exclusivamente a la producción de bananito baby, que ha conservado el espíritu de los negocios hechos con el tesón de generaciones entregadas a la labranza con un propósito común, ofrecerles a los clientes los mejores productos agrícolas de la región con una producción limpia, sostenible y con buenas prácticas agrícolas para la exportación. Entere historias, actividades y una explosión de sabores y aromas conoceremos todo el proceso de producción de esta fruta que se posiciona a nivel mundial desde las montañas de Melgar.",
-      disponibilidad: "Todos los días",
-      idiomas: ["SPN", "ENG"],
-      duracion: "8 horas",
-      horaSalida: "5:00 am",
-      tamanoGrupo: "Máximo 32 personas",
-      puntoSalida: "Parque deportivo y recreativo Las Vegas (Melgar)",
-      imagen: "bananitobaby/2.png",
-      incluye: [
-        "Recorrido agroturístico por la finca San Andrés",
-        "Transporte en vehículo especial de turismo",
-        "Acompañamiento de Informador turístico",
-        "Hidratación, almuerzo, refrigerio",
-        "Tarjeta de asistencia médica"
-      ],
-      recomendaciones: [
-        "Lleva ropa y calzado cómodo",
-        "Utiliza protector solar para evitar posibles quemaduras.",
-        "Intenta llevar tu propio termo para el agua y evita el uso de botellas de plástico para ayudar al planeta."
-      ]
-    },
-    {
-      nombre: "Canyoning, cascada Las Golondrinas",
-      descripcion: "El piedemonte de las montañas del Sumapaz se esconde cientos de maravillas naturales que hasta hoy día siguen desconocidas, entre ellas hay cascadas que rememoran las grandes epopeyas de los exploradores del pasado milenio y valles entre montañas que deslumbran a quienes los miran por primera vez, todo enmarcado en medio del inmenso paisaje del Boquerón. Para descubrir una de esas maravillas, la cascada de las Golondrina, nos desplazamos hasta el Eco Hotel El Reposo, allí los anfitriones nos esperan para dar inicio a un recorrido de senderismo durante el cual podrás avistar las aves y la amplia flora de los bosques andinos mientras nos internamos por un sendero estrecho cubierto de vegetación. Una vez en la cascada, podremos disfrutar de actividades como baño, hacer ascensos el cauce de agua dentro de un cañón rocoso; y sortearás toda clase de obstáculos como pozos y rocas para finalmente terminar con una actividad de torrentismo y retornar al punto de inicio.",
-      disponibilidad: "Todos los días",
-      idiomas: ["SPN", "ENG"],
-      duracion: "3 horas",
-      horaSalida: "5:00 am",
-      tamanoGrupo: "Máximo 10 personas",
-      imagen: "cascadas/1.jpg",
-      incluye: [
-        "Recorrido de senderismo, canyoning, torrentismo",
-        "Transporte en vehículo especial de turismo",
-        "Acompañamiento de instructor en deporte de aventura e Informador turístico",
-        "Equipos de seguridad para actividades",
-        "Hidratación, refrigerio",
-        "Tarjeta de asistencia médica"
-      ],
-      recomendaciones: [
-        "Lleva calzado cómodo para senderismo",
-        "Llevar ropa de recambio",
-        "Utiliza protector solar para evitar posibles quemaduras.",
-        "Intenta llevar tu propio termo para el agua y evita el uso de botellas de plástico para ayudar al planeta."
-      ]
-    }
-  ];
 
   return (
-    <div>
+    <div className="py-5 mb-5">
       <section className="section courses" id="courses">
-        <div className="text-center">
-          <img
-            src="sos_soslogic.png"
-            alt="logo-img"
-            className="logo_preset"
-          />
-        </div>
         <div className="container">
           <div className="row">
             <div className="col-lg-12 text-center">
               <div className="section-heading">
-                <h6>Nuestros Productos</h6>
-                <h2>Nuestros Productos</h2>
+                <h6>Nuestros Servicios</h6>
+                <h2>Nuestros Servicios</h2>
               </div>
+              <Swiper
+                spaceBetween={30}
+                loop={true}
+                freeMode={true}
+                grabCursor={true}
+                pagination={{
+                  clickable: true,
+                }}
+                breakpoints={{
+                  768: {
+                    slidesPerView: 3,
+                  },
+                  0: {
+                    slidesPerView: 1,
+                  },
+                }}
+                modules={[FreeMode, Autoplay, Pagination]}
+                className="mySwiper"
+                autoplay={{
+                  delay: 2500,
+                  disableOnInteraction: false,
+                }}
+              >
+                {/* Utiliza map para generar dinámicamente las tarjetas */}
+                {cardsData.map((card, index) => (
+                  <SwiperSlide key={index} className="p-4 my-3 text-start d-flex flex-column justify-content-between ">
+                    <div>
+                      <img
+                        style={{
+                          border: '1px solid #cfcef3',
+                          padding: 30,
+                          borderRadius: 150,
+                          transform: 'rotate(-10deg)',
+                          transition: 'transform 0.3s',
+                        }}
+                        onMouseEnter={(e) => {
+                          e.target.style.transform = 'rotate(-20deg)';
+                          e.target.style.padding = '25px';
+                        }}
+                        onMouseLeave={(e) => {
+                          e.target.style.padding = '30px';
+                          e.target.style.transform = 'rotate(-10deg)';
+                        }}
+                        width={130}
+                        src={card.image}
+                        alt="Avatar"
+                        className=" mb-5"
+                      />
+                    </div>
+                    <div style={{ minHeight: 380 }}>
+                      <h3>{card.title}</h3>
+                      <ul className="me-3 mb-4 ml-4 mb-5" style={{ fontFamily: 'Segoi UI' }}>
+                        {/* Utiliza map para generar dinámicamente los puntos */}
+                        {card.points.map((point, idx) => (
+                          <li style={{ textDecoration: 'dots' }} key={idx}>{point}</li>
+                        ))}
+                      </ul>
+                    </div>
+
+                    <div
+                      style={{
+                        display: 'inline-block',
+                        transition: 'transform 0.3s',
+                      }}
+                      onMouseOver={(e) => {
+                        e.currentTarget.style.transform = 'translateX(5px)';
+                      }}
+                      onMouseOut={(e) => {
+                        e.currentTarget.style.transform = 'translateX(0)';
+                      }}
+                    >
+                      <Link className="text-primary-color fw-bold text-decoration-none" href={card.link}>
+                        {card.buttonText} <ArrowRightOutlined />
+                      </Link>
+                    </div>
+
+
+                  </SwiperSlide>
+                ))}
+              </Swiper>
             </div>
           </div>
         </div>
       </section>
-
     </div>
   );
 };

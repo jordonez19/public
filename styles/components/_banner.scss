@@ -32,9 +32,10 @@
   }
 }
 .header-text {
-  width: 100%;
-  @include v.breakpoint(md-custom) {
-    width: 50%;
+  width: 50%;
+  @include v.breakpoint(mdx) {
+    width: 100%;
+    padding: 0;
   }
 }
 
@@ -43,8 +44,10 @@
   background-position: center center;
   background-size: cover;
   border-radius: 25px;
-  padding: 100px 100px;
   position: relative;
+  @include v.breakpoint(mdx) {
+    padding: 0;
+  }
 }
 
 .main-banner .item span.category {
@@ -66,7 +69,7 @@
 
 .main-banner .item h2 span {
   color: v.$primary-color;
-  background-color: #f2eafd; 
+  background-color: #f2eafd;
   padding: 0 10px;
 }
 .main-banner .item p {

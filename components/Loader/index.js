@@ -3,9 +3,13 @@ import Spinner from 'react-bootstrap/Spinner';
 
 const Preloader = () => {
   return (
-    <Spinner animation="border" role="status">
-      <span className="visually-hidden">Loading...</span>
-    </Spinner>
+    <section class="dots-container w-100 vh-100">
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+    </section>
   );
 };
 

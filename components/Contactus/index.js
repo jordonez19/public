@@ -2,7 +2,7 @@ import Link from "next/link";
 import React, { useState } from "react";
 import Swal from "sweetalert2";
 import axios from "axios";
-import { Spin } from "antd";
+import { Divider, Spin } from "antd";
 
 const Contactus = () => {
   const [data, setdata] = useState({});
@@ -53,10 +53,12 @@ const Contactus = () => {
             <div className="col-lg-6  align-self-center">
               <div className="section-heading">
                 <h6>Contactanos</h6>
-                <h2>No Dudes En Contactarnos En Cualquier Momento</h2>
+                <h2>Estamos Aquí Para Ayudarte No Dudes En Contactarnos En Cualquier Momento</h2>
+
                 <p>
-                  Gracias por elegir nuestros servicios turísticos. Ofrecemos las mejores experiencias de viaje a precios accesibles. Puedes apoyarnos compartiendo nuestro sitio web con tus amigos y familiares.
+                  Nos dedicamos a optimizar tus procesos logísticos y ofrecerte soluciones digitales eficientes. No dudes en comunicarte con nosotros para obtener más información o asistencia.
                 </p>
+
                 <p >
                   <svg className="me-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="24" fill="rgba(173,184,194,1)"><path d="M7 4V20H17V4H7ZM6 2H18C18.5523 2 19 2.44772 19 3V21C19 21.5523 18.5523 22 18 22H6C5.44772 22 5 21.5523 5 21V3C5 2.44772 5.44772 2 6 2ZM12 17C12.5523 17 13 17.4477 13 18C13 18.5523 12.5523 19 12 19C11.4477 19 11 18.5523 11 18C11 17.4477 11.4477 17 12 17Z"></path></svg>
                   +57 3116348717 <br />
@@ -108,7 +110,7 @@ const Contactus = () => {
                             name="email"
                             id="email"
                             onChange={handleChange}
-                            placeholder="E-mail..."
+                            placeholder="Correo..."
                             required
                           />
                         </fieldset>
@@ -125,23 +127,8 @@ const Contactus = () => {
                           />
                         </fieldset>
                       </div>
-                      <div className="col-lg-12">
-                        <fieldset>
-                          <select // Campo de selección de productos
-                            name="product"
-                            id="product"
-                            onChange={handleChange}
-                            required
-                          >
-                            <option value="">Seleccione un Producto</option>
-                            <option value="La cueva del Edén">La cueva del Edén</option>
-                            <option value="City Tour Melgar">City Tour Melgar</option>
-                            <option value="Icononzo">Icononzo</option>
-                            <option value="Bananito baby">Bananito baby</option>
-                            <option value="Canyoning">Canyoning</option>
-                          </select>
-                        </fieldset>
-                      </div>
+
+
                       <div className="col-lg-12">
                         <fieldset>
                           <textarea
@@ -153,6 +140,25 @@ const Contactus = () => {
                           ></textarea>
                         </fieldset>
                       </div>
+
+                      <div className="d-flex justify-content-start align-items-center w-100">
+                        <input onchange={handleChange} type="checkbox" required="required" id="terms" name="terms" value="Firma electronica"
+                          className="check_terms" />
+                        <p className="text-light">Firma electronica </p>
+                      </div>
+                      <div className="d-flex justify-content-start align-items-center w-100">
+                        <input onchange={handleChange} type="checkbox" required="required" id="terms" name="terms" value="Gestion de carga"
+                          className="check_terms" />
+                        <p className="text-light">Gestion de carga </p>
+                      </div>
+                      <div className="d-flex justify-content-start align-items-center w-100">
+                        <input onchange={handleChange} type="checkbox" required="required" id="terms" name="terms" value="Chat para empresas"
+                          className="check_terms" />
+                        <p className="text-light">Chat para empresas </p>
+                      </div>
+
+                      <Divider />
+
                       <div className="d-flex justify-content-center align-items-center w-100">
                         <input onClick={handleTerms} type="checkbox" required="required" id="terms" name="terms" value="Bike" className="check_terms" />
                         <p className="text-light">Estoy de acuerdo con la politica de privacidad, terminos y condiciones </p>

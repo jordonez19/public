@@ -4,6 +4,9 @@ import { Suspense, lazy } from "react";
 import MainLayout from "@/layout/MainLayout";
 import Head from "next/head";
 import Preloader from "@/components/Loader";
+import Services from "@/components/Services";
+import Aboutus from "@/components/Aboutus";
+import Contactus from "@/components/Contactus";
 
 // Importa los componentes de forma diferida (lazy)
 const Banner = lazy(() => import("@/components/Banner"));
@@ -21,22 +24,21 @@ export default function Home() {
       </Head>
 
       <MainLayout>
-        {/* Usando Suspense para mostrar un fallback mientras los componentes se cargan */}
-        <Suspense fallback={<Preloader />}>
-          <img className="fadeIn shape-banner" src="/banner/hero-shape.png" loading="lazy" />
-          <img className="fadeIn shape-banner-left" src="/banner/blur-layer.png" loading="lazy" />
-          <img className="fadeIn shape-banner-bottom" src="/banner/half-circle.png" loading="lazy" />
-          <img className="fadeIn banner-people_team" src="/banner/people_team.png" loading="lazy" />
-          {/* Renderiza los componentes diferidos dentro de Suspense */}
-          <Banner />
-          <Courses />
-          {/* Renderiza más componentes diferidos aquí según sea necesario */}
-          {/* <Services /> */}
-          {/* <Aboutus /> */}
-          {/* <Team /> */}
-          {/* <Testimonials /> */}
-          {/* <Contactus /> */}
-        </Suspense>
+
+        <img className="fadeIn shape-banner d-none d-md-block" src="/banner/hero-shape.png" loading="lazy" />
+        <img className="fadeIn shape-banner-left" src="/banner/blur-layer.png" loading="lazy" />
+        <img className="fadeIn shape-banner-bottom" src="/banner/half-circle.png" loading="lazy" />
+        <img className="fadeIn banner-people_team" src="/banner/people_team.png" loading="lazy" />
+        <Banner />
+
+        <Courses />
+
+        {/* Renderiza más componentes diferidos aquí según sea necesario */}
+        <Services />
+        {/* <Aboutus /> */}
+        {/* <Team /> */}
+        {/* <Testimonials /> */}
+        <Contactus />
       </MainLayout>
     </>
   );
