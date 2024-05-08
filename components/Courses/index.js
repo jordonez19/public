@@ -184,7 +184,7 @@ const Courses = () => {
                         e.currentTarget.style.transform = 'translateX(0)';
                       }}
                     >
-                      <Link className="text-primary-color fw-bold text-decoration-none" href={card.link}>
+                      <Link className="text-primary-color fw-bold text-decoration-none" href={'#contact'}>
                         {card.buttonText} <ArrowRightOutlined />
                       </Link>
                     </div>
