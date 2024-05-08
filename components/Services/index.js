@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
 
@@ -6,7 +7,10 @@ const Services = () => {
     <>
 
       <div className="services section" id="services">
-
+        <h2 className="section-title-services  p-0">
+          CARACTERÍSTICAS QUE HACEN A <br />
+          <img style={{ marginTop: -6 }} width={245} src="/soslogic.png" /> INCREÍBLE
+        </h2>
         <div className="container">
           <div className="row">
             <div className="col-lg-4 col-md-6">

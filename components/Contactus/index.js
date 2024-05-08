@@ -48,13 +48,13 @@ const Contactus = () => {
   return (
     <>
       <div className="contact-us section" id="contact">
+       
         <div className="container">
           <div className="row">
             <div className="col-lg-6  align-self-center">
               <div className="section-heading">
                 <h6>Contactanos</h6>
                 <h2>Estamos Aquí Para Ayudarte No Dudes En Contactarnos En Cualquier Momento</h2>
-
                 <p>
                   Nos dedicamos a optimizar tus procesos logísticos y ofrecerte soluciones digitales eficientes. No dudes en comunicarte con nosotros para obtener más información o asistencia.
                 </p>
