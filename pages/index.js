@@ -1,14 +1,14 @@
-/* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable @next/next/no-img-element */
-import Aboutus from "@/components/Aboutus";
-import Banner from "@/components/Banner";
-import Contactus from "@/components/Contactus";
-import Courses from "@/components/Courses";
-import Services from "@/components/Services";
-import Team from "@/components/Team";
-import Testimonials from "@/components/Testimonials";
+/* eslint-disable jsx-a11y/alt-text */
+import { Suspense, lazy } from "react";
 import MainLayout from "@/layout/MainLayout";
 import Head from "next/head";
+import Preloader from "@/components/Loader";
+
+// Importa los componentes de forma diferida (lazy)
+const Banner = lazy(() => import("@/components/Banner"));
+const Courses = lazy(() => import("@/components/Courses"));
+// Añade más importaciones diferidas según sea necesario para otros componentes
 
 export default function Home() {
   return (
@@ -21,19 +21,23 @@ export default function Home() {
       </Head>
 
       <MainLayout>
-        <img className="shape-banner" src="/banner/hero-shape.png" />
-        <img className="shape-banner-left" src="/banner/blur-layer.png" />
-        <img className="shape-banner-bottom" src="/banner/half-circle.png" />
-        <img className="banner-people_team" src="/banner/people_team.png" />
-        <Banner />
-        <Courses />
-        {/* <Services />
-        <Aboutus />
-        <Team />
-        <Testimonials />
-        <Contactus /> */}
+        {/* Usando Suspense para mostrar un fallback mientras los componentes se cargan */}
+        <Suspense fallback={<Preloader />}>
+          <img className="fadeIn shape-banner" src="/banner/hero-shape.png" loading="lazy" />
+          <img className="fadeIn shape-banner-left" src="/banner/blur-layer.png" loading="lazy" />
+          <img className="fadeIn shape-banner-bottom" src="/banner/half-circle.png" loading="lazy" />
+          <img className="fadeIn banner-people_team" src="/banner/people_team.png" loading="lazy" />
+          {/* Renderiza los componentes diferidos dentro de Suspense */}
+          <Banner />
+          <Courses />
+          {/* Renderiza más componentes diferidos aquí según sea necesario */}
+          {/* <Services /> */}
+          {/* <Aboutus /> */}
+          {/* <Team /> */}
+          {/* <Testimonials /> */}
+          {/* <Contactus /> */}
+        </Suspense>
       </MainLayout>
     </>
   );
 }
-11

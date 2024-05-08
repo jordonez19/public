@@ -1,19 +1,11 @@
 import React from "react";
+import Spinner from 'react-bootstrap/Spinner';
 
 const Preloader = () => {
   return (
-    <>
-      <div id="js-preloader" className="js-preloader">
-        <div className="preloader-inner">
-          <span className="dot"></span>
-          <div className="dots">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-        </div>
-      </div>
-    </>
+    <Spinner animation="border" role="status">
+      <span className="visually-hidden">Loading...</span>
+    </Spinner>
   );
 };
 
