@@ -33,7 +33,7 @@ const Whatsapp = () => {
           </div>
           <div className="whatsapp-footer">
             <a
-              href={`https://api.whatsapp.com/send?phone=573142392945&text=${encodeURIComponent(
+              href={`https://api.whatsapp.com/send?phone=573246586418&text=${encodeURIComponent(
                 message
               )}`}
               id="whatsapp-btn"
