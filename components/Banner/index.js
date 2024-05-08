@@ -72,6 +72,8 @@ const Banner = () => {
                   <div className="buttons d-sm-flex flex-column flex-lg-row mt-5 align-items-center">
                     <Link href="#" className="mt-0 custom-button">
                       Contactar
+                    </Link> <Link href="#" className=" mx-2 mt-0 custom-button_outline">
+                      Mas información
                     </Link>
                   </div>
                 </div>

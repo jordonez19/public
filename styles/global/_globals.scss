@@ -144,3 +144,28 @@ a#nav-dropdown-light-example {
     color: v.$white;
   }
 }
+
+.custom-button_outline {
+  background-color: transparent;
+  outline: none;
+  padding: 0.75rem 1.25rem;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-family: inherit;
+  color: v.$primary-color;
+  border: 1px solid v.$primary-color;
+  transition: 0.3s ease all;
+  text-decoration: none;
+
+  &:hover {
+    border-color: v.$primary-color;
+    background: v.$primary-color;
+    color: v.$white;
+  }
+
+  &:active {
+    border-color: v.$dark-color;
+    background: v.$dark-color;
+    color: v.$white;
+  }
+}

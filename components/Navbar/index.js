@@ -89,22 +89,17 @@ const Navbar = () => {
             <ul>
               <li>
                 <Link className="menu-link" href="#top" onClick={handleLinkClick}>
-                  Inicio
+                  Firma electronica
                 </Link>
               </li>
               <li>
                 <Link className="menu-link" href="#services" onClick={handleLinkClick}>
-                  Servicios
+                  Gestion de carga
                 </Link>
               </li>
               <li>
                 <Link className="menu-link" href="#aboutus" onClick={handleLinkClick}>
-                  Nosotros
-                </Link>
-              </li>
-              <li>
-                <Link className="menu-link" href="#courses" onClick={handleLinkClick}>
-                  Productos
+                  Firmas para empresas
                 </Link>
               </li>
               {/*  <li>
