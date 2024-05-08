@@ -17,13 +17,12 @@ const Contactus = () => {
     const { name, value } = e.target;
     setdata({ ...data, [name]: value })
   }
-
   axios.defaults.headers.post['Content-Type'] = 'application/json';
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true)
-    const formSubmitUrl = "https://formsubmit.co/info@tolimaadventure.com";
+    const formSubmitUrl = "https://formsubmit.co/contacto@soslogic.com";
 
     try {
       const response = await axios.post(formSubmitUrl, data);
@@ -128,7 +127,6 @@ const Contactus = () => {
                         </fieldset>
                       </div>
 
-
                       <div className="col-lg-12">
                         <fieldset>
                           <textarea
@@ -141,21 +139,24 @@ const Contactus = () => {
                         </fieldset>
                       </div>
 
-                      <div className="d-flex justify-content-start align-items-center w-100">
-                        <input onchange={handleChange} type="checkbox" required="required" id="terms" name="terms" value="Firma electronica"
+                      {/* <div className="d-flex justify-content-start align-items-center w-100">
+                        <input onChange={handleChange}
+                          type="checkbox" required="required" id="firma_electronica" name="firma_electronica" value="Firma electronica"
                           className="check_terms" />
                         <p className="text-light">Firma electronica </p>
                       </div>
                       <div className="d-flex justify-content-start align-items-center w-100">
-                        <input onchange={handleChange} type="checkbox" required="required" id="terms" name="terms" value="Gestion de carga"
+                        <input onChange={handleChange}
+                          type="checkbox" required="required" id="gestion_de_carga" name="gestion_de_carga" value="Gestion de carga"
                           className="check_terms" />
                         <p className="text-light">Gestion de carga </p>
                       </div>
                       <div className="d-flex justify-content-start align-items-center w-100">
-                        <input onchange={handleChange} type="checkbox" required="required" id="terms" name="terms" value="Chat para empresas"
+                        <input onChange={handleChange}
+                          type="checkbox" required="required" id="chat_para_empresas" name="chat_para_empresas" value="Chat para empresas"
                           className="check_terms" />
                         <p className="text-light">Chat para empresas </p>
-                      </div>
+                      </div> */}
 
                       <Divider />
 
