@@ -8,7 +8,7 @@ import {
 } from "@ant-design/icons";
 import Link from "next/link";
 import ShoppingCart from "../ShoppingCart";
-import Image from "next/image";
+/* import Image from "next/image"; */
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -78,12 +78,12 @@ const Navbar = () => {
         <div className="header__content">
           <div className="logo_container">
             <Link href="/">
-              <Image
+            {/*   <Image
                 width={200} height={50}
                 className={`logo-img ${isFixed ? "fixed" : ""}`}
                 src="/sos_soslogic.png"
                 alt="logo-img"
-              />
+              /> */}
             </Link>
           </div>
           <nav className={`header__content__nav ${menuOpen ? "isMenu" : ""}`}>

@@ -4,7 +4,7 @@ import Link from "next/link";
 import PoliciesDrawer from "../PoliciesDrawer";
 import ServicesDrawer from "../ServicesDrawer";
 import PrivacyDrawer from "../PrivacyDrawer";
-import Image from "next/image";
+/* import Image from "next/image"; */
 
 const Footer = () => {
   const [conditionsModalVisible, setConditionsModalVisible] = useState(false);
@@ -65,9 +65,9 @@ const Footer = () => {
               <p className="ms-2" style={{ textDecoration: 'underline', cursor: 'pointer' }} onClick={showservicesModal}> Servicios</p>
             </div>
             <p>
-              Copyright © 2023 todos los derechos reservados. &nbsp;&nbsp;&nbsp; <Image width={200} height={39} src="/sos_soslogic_white.png"
+              Copyright © 2023 todos los derechos reservados. &nbsp;&nbsp;&nbsp; {/*< Image width={200} height={39} src="/sos_soslogic_white.png"
                 alt="logo-img"
-              />
+              /> */}
             </p>
           </div>
         </div>

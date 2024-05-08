@@ -1,6 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
-import { Card, Button } from "antd";
 import { ArrowRightOutlined } from "@ant-design/icons";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
@@ -8,7 +7,7 @@ import 'swiper/css/free-mode';
 import 'swiper/css/pagination';
 import { Autoplay, Pagination, FreeMode } from 'swiper/modules';
 import Link from "next/link";
-import Image from "next/image";
+/* import Image from "next/image"; */
 
 
 const Courses = () => {
@@ -141,7 +140,7 @@ const Courses = () => {
                 {cardsData.map((card, index) => (
                   <SwiperSlide key={index} className="p-4 my-3 text-start d-flex flex-column justify-content-between ">
                     <div>
-                      <Image width={'130'} height={'130'}
+                     {/*  <Image width={'130'} height={'130'}
                         style={{
                           border: '1px solid #cfcef3',
                           padding: 30,
@@ -160,7 +159,7 @@ const Courses = () => {
                         src={card.image}
                         alt="Avatar"
                         className=" mb-5"
-                      />
+                      /> */}
                     </div>
                     <div style={{ minHeight: 380 }}>
                       <h3>{card.title}</h3>
