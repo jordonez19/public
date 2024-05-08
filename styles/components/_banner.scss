@@ -1,13 +1,36 @@
 @use "../global/variables" as v;
 
-.shape-banner{
+.shape-banner {
   position: absolute;
   height: auto;
   top: 0;
   right: 0;
   z-index: -1;
 }
-
+.shape-banner-left {
+  position: absolute;
+  height: auto;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.shape-banner-bottom {
+  position: absolute;
+  height: auto;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
+.banner-people_team {
+  position: absolute;
+  width: 45%;
+  right: 25px;
+  bottom: 0;
+  z-index: -1;
+  @include v.breakpoint(mdx) {
+    display: none;
+  }
+}
 .header-text {
   width: 100%;
   @include v.breakpoint(md-custom) {
@@ -26,7 +49,7 @@
 
 .main-banner .item span.category {
   background-color: v.$third-color;
-  color: v.$white;
+  color: v.$dark-color;
   font-size: 14px;
   text-transform: uppercase;
   padding: 5px 15px;
@@ -35,14 +58,19 @@
 }
 
 .main-banner .item h2 {
-  font-size: 48px;
+  font-size: 44px;
   font-weight: 700;
-  color: v.$white;
-  line-height: 70px;
+  color: v.$dark-color;
+  line-height: 65px;
 }
 
+.main-banner .item h2 span {
+  color: v.$primary-color;
+  background-color: #f2eafd; 
+  padding: 0 10px;
+}
 .main-banner .item p {
-  color: v.$white;
+  color: v.$font-primary;
 }
 
 .main-banner .item .buttons {

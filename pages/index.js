@@ -21,15 +21,17 @@ export default function Home() {
       </Head>
 
       <MainLayout>
-        <img className="shape-banner" src="/banner/hero-shape.png"/>
+        <img className="shape-banner" src="/banner/hero-shape.png" />
+        <img className="shape-banner-left" src="/banner/blur-layer.png" />
+        <img className="shape-banner-bottom" src="/banner/half-circle.png" />
+        <img className="banner-people_team" src="/banner/people_team.png" />
         <Banner />
         <Courses />
-        <Services />
+        {/* <Services />
         <Aboutus />
         <Team />
         <Testimonials />
-        {/* <Events /> */}
-        <Contactus />
+        <Contactus /> */}
       </MainLayout>
     </>
   );

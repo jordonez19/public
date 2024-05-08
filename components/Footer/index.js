@@ -42,7 +42,7 @@ const Footer = () => {
         <div className="container">
           <div className="col-lg-12">
             <p>
-              Copyright © 2023 todos los derechos reservados. &nbsp;&nbsp;&nbsp; <b>Tolima Adventure</b>
+              Copyright © 2023 todos los derechos reservados. &nbsp;&nbsp;&nbsp; <img width={200} src="/sos_soslogic_white.png" />
             </p>
             <div className="d-flex justify-content-center">
               <p className="" style={{ textDecoration: 'underline', cursor: 'pointer' }} onClick={showConditionsModal}>Politica de sostenibilidad </p>

@@ -74,7 +74,7 @@ const Navbar = () => {
         <p>Some contents...</p>
       </Drawer>
 
-      <header className={`mt-4 header ${isFixed ? "fixed-navbar" : ""}`}>
+      <header className={` w-75 mt-md-0 header ${isFixed ? "fixed-navbar" : ""}`}>
         <div className="header__content">
           <div className="logo_container">
             <Link href="/">

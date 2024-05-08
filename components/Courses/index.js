@@ -193,81 +193,9 @@ const Courses = () => {
               </div>
             </div>
           </div>
-          <div className="row event_box">
-            {experienciasTuristicas.map((experiencia, index) => (
-              <div key={index} className={`col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 ${experiencia.categoria}`}>
-                <div className="events_item">
-                  <div className="thumb">
-                    <img style={{ width: '100%' }} src={eventos[index].imagen} alt="" />
-                    {/* <span className="price">
-                      <h6>
-                        <em>$</em>{eventos[index].precio}
-                      </h6>
-                    </span> */}
-                  </div>
-                  <div className="down-content">
-                    <span className="author">{eventos[index].autor}</span>
-                    <h4>{eventos[index].titulo}</h4>
-                    <div className="main-button">
-                      <Button type="primary" danger onClick={() => openModal(experiencia)}>Leer Más</Button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
         </div>
       </section>
 
-      <Modal
-        title={<h2>{modalData && modalData.nombre}</h2>}
-        open={modalData !== null}
-        width={900}
-        onCancel={closeModal}
-        footer={[
-          <Button type="primary" danger key="back" onClick={closeModal}>
-            Cerrar
-          </Button>
-        ]}
-      >
-        {modalData && (
-          <>
-            <Row gutter={[16, 16]}>
-              <Col xs={24} sm={12}>
-                <img
-                  src={modalData.imagen}
-                  alt={modalData.nombre}
-                  className="logo_modal_course"
-                />
-              </Col>
-              <Col xs={24} sm={12}>
-                <p>{modalData.descripcion}</p>
-              </Col>
-            </Row>
-            <h4 className="text-primary-color">Detalles:</h4>
-            <ul>
-              <li><strong className="text-third-color">Disponibilidad:</strong> {modalData.disponibilidad}</li>
-              <li><strong className="text-third-color">Idiomas:</strong> {modalData.idiomas.join(', ')}</li>
-              <li><strong className="text-third-color">Duración:</strong> {modalData.duracion}</li>
-              <li><strong className="text-third-color">Hora de salida:</strong> {modalData.horaSalida}</li>
-              <li><strong className="text-third-color">Tamaño del grupo:</strong> {modalData.tamanoGrupo}</li>
-              <li><strong className="text-third-color">Punto de salida:</strong> {modalData.puntoSalida}</li>
-            </ul>
-            <h4 className="text-primary-color">Incluye:</h4>
-            <ul>
-              {modalData.incluye.map((item, index) => (
-                <li key={index}>{item}</li>
-              ))}
-            </ul>
-            <h4 className="text-primary-color">Recomendaciones:</h4>
-            <ul>
-              {modalData.recomendaciones.map((item, index) => (
-                <li key={index}>{item}</li>
-              ))}
-            </ul>
-          </>
-        )}
-      </Modal>
     </div>
   );
 };

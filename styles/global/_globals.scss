@@ -10,6 +10,16 @@
   color: v.$font-primary;
 }
 
+.custom-button {
+  background-color: v.$primary-color;
+  color: v.$white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
 .hover-option {
   color: v.$hover-option;
 }
@@ -41,7 +51,7 @@ a#nav-dropdown-light-example {
   font-weight: 600;
   text-transform: capitalize;
   margin: 20px 0;
-  line-height: 44px;
+  line-height: 43px;
 }
 
 .section-heading h2 em {

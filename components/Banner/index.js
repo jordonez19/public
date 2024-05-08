@@ -57,38 +57,28 @@ const Banner = () => {
               <div
                 className="item fadeIn"
                 style={{
-                  boxShadow: "0px 0px 20px 0px rgba(0, 0, 0, 0.1)",
-                  backgroundImage: `url("${imagenes_banner[currentImageIndex].url}")`,
                 }}
               >
                 <div className="header-text text-center text-sm-center text-md-start text-lg-start">
-                  <span className="category bg-primary-color text-white px-3 py-1 rounded mb-2">
+                  {/* <span className="category bg-primary-color text-white px-3 py-1 rounded mb-2">
                     Nuestros Productos
-                  </span>
-                  <h2 className="text-white mt-4">
-                    ¡Bienvenido a Tolima Adventure!
+                  </span> */}
+                  <h2 className=" mt-4">
+                    <span>Transforma</span> tu empresa con nuestra suite de <span>soluciones digitales</span>
                   </h2>
-                  <p className="text-white mt-3">
-                    Descubre tu próximo destino de ensueño con nosotros: ¡tu aventura comienza aquí!
+                  <p className=" mt-3">
+                    soslogic ofrece a tu empresa el software necesario para mejorar la productividad en tu organización o institución.
                   </p>
                   <div className="buttons d-sm-flex flex-column flex-lg-row mt-5 align-items-center">
                     <div className="main-button">
-                      <Link href="#" className="btn btn-primary-color">
-                        Solicitar Asesoría
-                      </Link>
-                    </div>
-                    <div className="icon-button">
-                      <Link
-                        href="#"
-                        className="btn btn-outline-primary-color"
-                      >
-                        ¿Qué es Tolima Adventure?
+                      <Link href="#" className="custom-button">
+                        Contactar
                       </Link>
                     </div>
                   </div>
                 </div>
 
-                <div className="mt-4 position-absolute buttons__banner-container">
+                {/*   <div className="mt-4 position-absolute buttons__banner-container">
                   <button
                     type="button"
                     role="presentation"
@@ -106,7 +96,7 @@ const Banner = () => {
                   >
                     <i className="fa fa-angle-right" aria-hidden="true"></i>
                   </button>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>

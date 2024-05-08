@@ -14,7 +14,6 @@
 }
 .header {
   background: v.$white;
-  width: 80%;
   margin: 0 auto 25px;
   height: v.$headerHeight;
   padding: 0 1.5rem;
@@ -68,6 +67,8 @@
       backdrop-filter: blur(2px);
       transform: translate(0);
       transition: 0.3s ease transform;
+      font-size: 1.2rem;
+      font-weight: 600;
 
       @include v.breakpoint(md-custom) {
         transform: none;
@@ -106,6 +107,7 @@
 
             &:hover {
               background: rgba(v.$light, 0.1);
+              color: v.$primary-color;
             }
             &:active {
               border-radius: calc(#{v.$borderRadius} + 6px);
