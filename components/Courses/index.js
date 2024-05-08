@@ -25,7 +25,7 @@ const Courses = () => {
         "Control de porcentajes de anulaciones ante el RNDC en tiempo real.",
         "Implementación de prácticas sostenibles para reducir el impacto ambiental de las operaciones de carga."
       ],
-      link: "/experiencias",
+      link: "#contact",
       buttonText: "Más información"
     },
     {
@@ -41,7 +41,7 @@ const Courses = () => {
         "Reducción de gastos en papelería y mensajería",
         "Protección del medio ambiente."
       ],
-      link: "/experiencias",
+      link: "#contact",
       buttonText: "Más información"
     },
     {
@@ -55,7 +55,7 @@ const Courses = () => {
         "Registro y archivo de historial de conversaciones para referencia futura y mejora de la atención al cliente",
         "Soporte multicanal para llegar a los usuarios en cualquier momento y lugar",
       ],
-      link: "/experiencias",
+      link: "#contact",
       buttonText: "Más información"
     },
   ];

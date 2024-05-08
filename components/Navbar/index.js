@@ -88,17 +88,17 @@ const Navbar = () => {
           <nav className={`header__content__nav ${menuOpen ? "isMenu" : ""}`}>
             <ul>
               <li>
-                <Link className="menu-link" href="#top" onClick={handleLinkClick}>
+                <Link className="menu-link" href="#courses" onClick={handleLinkClick}>
                   Firma electronica
                 </Link>
               </li>
               <li>
-                <Link className="menu-link" href="#services" onClick={handleLinkClick}>
+                <Link className="menu-link" href="#courses" onClick={handleLinkClick}>
                   Gestion de carga
                 </Link>
               </li>
               <li>
-                <Link className="menu-link" href="#aboutus" onClick={handleLinkClick}>
+                <Link className="menu-link" href="#courses" onClick={handleLinkClick}>
                   Firmas para empresas
                 </Link>
               </li>
