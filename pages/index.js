@@ -34,7 +34,7 @@ export default function Home() {
         <Services />
         {/* <Aboutus /> */}
         {/* <Team /> */}
-        <Testimonials />
+        {/* <Testimonials /> */}
         <Contactus />
       </MainLayout>
     </>
