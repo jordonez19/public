@@ -118,8 +118,7 @@ const Navbar = () => {
             >
               <button className="me-2 ">Contactar</button>
             </Link>
-            <MenuOutlined
-              className="ms-3 d-block d-md-none " style={{ fontSize: 35 }} onClick={showDrawer} />
+            <MenuOutlined className="ms-3 d-none d-md-none " style={{ fontSize: 35 }} onClick={showDrawer} />
           </nav>
           <div
             className={`header__content__toggle ${isFixed ? "fixed__toogle" : ""}`}

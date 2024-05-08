@@ -56,7 +56,6 @@ const Banner = () => {
             <div className="owl-carousel owl-banner fadeIn">
               <div
                 className="item fadeIn p-0 p-md-5 mt-0 mt-md-5"
-                
               >
                 <div className="header-text text-center text-sm-center text-md-start text-lg-start">
                   {/* <span className="category bg-primary-color text-white px-3 py-1 rounded mb-2">
@@ -69,12 +68,14 @@ const Banner = () => {
                     soslogic ofrece a tu empresa el software necesario para mejorar la productividad en tu organización o institución.
                   </p>
                   <div className="buttons d-sm-flex flex-column flex-lg-row mt-5 align-items-center">
-                    <Link href="#" className="mt-0 custom-button">
-                      Contactar
+                    <Link
+                      href={`#contact`}
+                      className="mt-0 custom-button">
+                      Contactanos
                     </Link>
-                    <Link href="#" className=" mx-2 mt-2 mt-md-0 custom-button_outline">
+                   {/*  <Link href="#" className=" mx-2 mt-2 mt-md-0 custom-button_outline">
                       Mas información
-                    </Link>
+                    </Link> */}
                   </div>
                 </div>
 
