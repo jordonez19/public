@@ -70,11 +70,9 @@ const Banner = () => {
                     soslogic ofrece a tu empresa el software necesario para mejorar la productividad en tu organización o institución.
                   </p>
                   <div className="buttons d-sm-flex flex-column flex-lg-row mt-5 align-items-center">
-                    <div className="main-button">
-                      <Link href="#" className="custom-button">
-                        Contactar
-                      </Link>
-                    </div>
+                    <Link href="#" className="mt-0 custom-button">
+                      Contactar
+                    </Link>
                   </div>
                 </div>
 
