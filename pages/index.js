@@ -1,5 +1,4 @@
-/* eslint-disable @next/next/no-img-element */
-/* eslint-disable jsx-a11y/alt-text */
+
 import { Suspense, lazy } from "react";
 import MainLayout from "@/layout/MainLayout";
 import Head from "next/head";
@@ -25,10 +24,7 @@ export default function Home() {
 
       <MainLayout>
 
-        <img className="fadeIn shape-banner d-none d-md-block" src="/banner/hero-shape.png" loading="lazy" />
-        <img className="fadeIn shape-banner-left" src="/banner/blur-layer.png" loading="lazy" />
-        <img className="fadeIn shape-banner-bottom" src="/banner/half-circle.png" loading="lazy" />
-        <img className="fadeIn banner-people_team" src="/banner/people_team.png" loading="lazy" />
+       
         <Banner />
 
         <Courses />

@@ -1,12 +1,8 @@
-/** @type {import('next').NextConfig} */
 const path = require("path");
+
+/** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-};
-
-module.exports = nextConfig;
-
-module.exports = {
   sassOptions: {
     includePaths: [path.join(__dirname, "styles")],
   },
@@ -14,3 +10,5 @@ module.exports = {
     presets: ["next/babel"],
   },
 };
+
+module.exports = nextConfig;
